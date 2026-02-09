@@ -4,7 +4,7 @@
 
 1. Identifique os principais concorrentes mais utilizados pelo seu público-alvo.
 > [Hyperstack](https://thehyperstack.com/), [Credly](https://info.credly.com/), [e-diplomas](https://e-diploma.com.br/)
-![Hyperstack]()
+![Hyperstack](hyperstack.png)
 2. Descreva as características e funcionalidades de cada concorrente.
 > Geração de design dos certificados, adequação com regras locais de emissão, verificação de capacidade técnicas.
 3. Colete opniões sobre a experiência do usuário (UX) de cada concorrente.
