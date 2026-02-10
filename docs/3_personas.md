@@ -1,42 +1,319 @@
 # Personas
 
-- Descreva as personas que irão interagir com a aplicação ou produto. Deixe claro suas principais caracteristicas e contextos sociais, econômicos e culturais.
-- Determine qual o grupo específico de pessoas ou organizações para as quais este produto ou serviço é direcionado.
-- Descreva as caracteristicas demográficas, comportamentais, psicográficas ou geográficas deste público alvo que o torna mais propenso a se interessar pelo que está sendo oferecido neste projeto ou serviço.
-- Quais informações sobre o usuário o serviço ou poduto deve guardar?
-- Apresnete apenas as personas primárias.
+## Público-Alvo
 
+Este projeto destina-se a três grupos principais de usuários no ecossistema de educação superior e mercado de trabalho brasileiro:
 
-> **_NOTE:_**: Cada persona deve ter uma foto de rosto que a represente. Vocês podem utilizar esse [site](https://thispersondoesnotexist.com/) para gerar as fotos.
+1. **Instituições de Ensino Superior (IES)** - Universidades que emitem diplomas e certificados digitais
+2. **Estudantes e Ex-Alunos** - Indivíduos que necessitam de documentação acadêmica verificável
+3. **Empresas e Organizações Verificadoras** - Empresas que precisam validar credenciais acadêmicas
 
-# Mapa de empatia
+### Características do Público-Alvo
 
-![Mapa de empatia](imagens/empatia.png)
+**Demográficas:**
 
-- Determine o mapa de empatia[1] de pelo menos uma persona primária e uma sercundária.
-  - O que o usuário vê: aqui estamos falando do ambiente visual em que o usuário se encontra. Ou seja, o que ele efetivamente enxerga, as pessoas e objetos que estão ao seu redor. Isso ajuda a entender o contexto em que o usuário está inserido e as influências visuais que está recebendo.
-  - O que o usuário ouve: neste quadrante, buscamos entender o que o usuário está ouvindo, os sons que o cercam e como eles influenciam suas ações.
-  - O que o usuário diz e faz: aqui consideramos ações e comportamentos que o usuário apresenta durante sua interação com serviço ou poduto.
-  - O que o usuário pensa e sente: neste quadrante, buscamos entender os pensamentos, sentimentos, emoções e percepções que o usuário tem em relação ao serviço ou poduto. Quais expectativas o usuário cria sobre o serviço ou poduto?
-  Que tipo de serviço ou poduto mais agrada essa persona?
-  - Dores: quando falamos sobre dores do usuário, estamos fazendo referência a quaisquer obstáculos, necessidades ou frustrações que o usuário possa experimentar ao tentar realizar uma tarefa ou alcançar um objetivo. Isso inclui, por exemplo, problemas de usabilidade, dificuldades de acesso ou outros desafios que podem afetar a experiência do usuário.
-  - Ganhos: nesse caso estamos falando de quaisquer benefícios ou recompensas que o usuário possa experimentar ao utilizar o serviço ou poduto. Isso pode incluir economia de tempo ou facilidade de uso, por exemplo. Que desejos do usuário o serviço ou poduto satisfaz?
+- Faixa etária: 18-60 anos (majoritariamente 20-35 anos para estudantes)
+- Localização: Brasil (todas as regiões)
+- Escolaridade: Ensino superior completo ou em andamento
+- Renda: Variada (classes C, B e A)
 
-# Contexto de uso
+**Comportamentais:**
 
-- Descreva o ambiente em que o serviço ou poduto deve ser utilizado.
-- Qual/quais o(s) contexto(s) sociais, econômicos e culturais existentes neste ambiente?
-- Quais informações sobre o ambiente, o serviço ou poduto deve guardar antes de iniciar a interação?
-- O que normalmente deve estar acontecendo com o ambiente quando o usuário interagir com o serviço ou poduto?
+- Usuários de tecnologia com diferentes níveis de alfabetização digital
+- Necessidade de processos ágeis e seguros para documentação
+- Preocupação com segurança de dados pessoais
+- Busca por soluções que reduzam burocracia
 
-# Jornada do usuário
+**Psicográficas:**
 
-- Criar uma narrativa para o o seu serviço ou poduto com o usuário.
-- Determine o que o usuário realiza desde a primeira até o última interação com o serviço ou poduto.
-  - Descreva o que acontece ou pode acontecer passo a passo
-  - Como a tarefa começa? Como a tarefa se desenvolve? Como a tarefa termina?
+- Valorizam autenticidade e transparência
+- Preocupados com fraudes e falsificações
+- Buscam eficiência e praticidade
 
+---
 
+## Persona Primária 1: Coordenadora de Secretaria Acadêmica
 
+![Foto Maria Eduarda](https://thispersondoesnotexist.com/)
 
-[1] Fonte: Adaptado de <https://hazeshift.com.br/mapa-de-empatia/>
+### Maria Eduarda Santos
+
+**Idade:** 42 anos  
+**Cargo:** Coordenadora da Secretaria Acadêmica  
+**Instituição:** Universidade privada de médio porte (5.000 alunos)  
+**Localização:** São Paulo, SP
+
+#### Características Sociais, Econômicas e Culturais
+
+- Formação superior em Administração com pós-graduação em Gestão Educacional
+- Trabalha há 15 anos em instituições de ensino
+- Casada, 2 filhos, classe média alta
+- Busca constantemente melhorias em processos acadêmicos
+- A universidade tem orçamento limitado mas investe em tecnologia para se manter competitiva
+
+#### Objetivos e Motivações
+
+- Reduzir tempo de emissão de diplomas (atualmente 6-12 meses)
+- Diminuir casos de fraude e falsificação de documentos
+- Facilitar o trabalho da equipe de secretaria
+- Melhorar a imagem da instituição com tecnologia
+
+#### Dores e Desafios
+
+- Processos manuais demorados e burocráticos
+- Solicitações constantes de segunda via e autenticações
+- Custos elevados com impressão e cartórios
+- Preocupação com segurança e falsificações
+
+#### Comportamento Digital
+
+- Usuária intermediária de tecnologia
+- Utiliza sistemas de gestão acadêmica diariamente
+- Prefere interfaces intuitivas e suporte técnico disponível
+
+#### Informações Necessárias do Usuário
+
+- Dados cadastrais da instituição (CNPJ, razão social, endereço)
+- Dados dos operadores (nome, CPF, email, cargo)
+- Histórico de certificados emitidos
+
+---
+
+## Persona Primária 2: Estudante/Recém-Formado
+
+![Foto Lucas Mendes](https://thispersondoesnotexist.com/)
+
+### Lucas Mendes
+
+**Idade:** 24 anos  
+**Situação:** Recém-formado buscando primeiro emprego  
+**Formação:** Engenharia da Computação  
+**Localização:** Belo Horizonte, MG
+
+#### Características Sociais, Econômicas e Culturais
+
+- Geração Z, nativo digital
+- Família de classe média, primeiro da família a concluir ensino superior
+- Ativo em redes sociais profissionais (LinkedIn)
+- Valoriza praticidade e soluções digitais
+- Renda familiar limitada para gastos com autenticações
+
+#### Objetivos e Motivações
+
+- Ter acesso rápido ao diploma para processos seletivos
+- Compartilhar credenciais acadêmicas facilmente com empregadores
+- Evitar gastos com autenticações em cartório
+- Ter controle sobre seus dados acadêmicos
+
+#### Dores e Desafios
+
+- Demora excessiva para receber diploma físico (6-12 meses)
+- Custos de R$ 15-30 por autenticação em cartório
+- Necessidade de ir presencialmente ao cartório
+- Dificuldade em comprovar formação para empresas de outros estados
+- Risco de perda ou dano do documento físico
+
+#### Comportamento Digital
+
+- Usuário avançado de tecnologia e aplicativos móveis
+- Acessa serviços principalmente via smartphone
+- Valoriza interfaces modernas
+- Compartilha documentos digitalmente (PDF, links)
+
+#### Informações Necessárias do Usuário
+
+- Dados pessoais (nome, CPF, RG, data de nascimento)
+- Email pessoal e telefone
+- Dados acadêmicos (curso, data de conclusão)
+
+---
+
+## Persona Primária 3: Recrutadora/Empresa Verificadora
+
+![Foto Ana Carolina](https://thispersondoesnotexist.com/)
+
+### Ana Carolina Ferreira
+
+**Idade:** 32 anos  
+**Cargo:** Analista Sênior de Recrutamento e Seleção  
+**Empresa:** Fintech de médio porte (200 funcionários)  
+**Localização:** São Paulo, SP
+
+#### Características Sociais, Econômicas e Culturais
+
+- Formação em Psicologia com especialização em RH
+- 8 anos de experiência em recrutamento
+- Classe média alta, solteira
+- Atuante em comunidades de RH e tecnologia
+- Empresa em crescimento acelerado com orçamento para ferramentas de RH
+
+#### Objetivos e Motivações
+
+- Validar formação acadêmica de candidatos rapidamente
+- Reduzir riscos de contratação de pessoas com diplomas falsos
+- Agilizar processos de onboarding
+- Manter histórico auditável de verificações
+
+#### Dores e Desafios
+
+- Tempo gasto em validações manuais de diplomas (2-5 dias por candidato)
+- Dificuldade em verificar autenticidade de documentos digitalizados
+- Dependência de contato com universidades (nem sempre responsivas)
+- Custos de R$ 100-300 por verificação em serviços terceirizados
+- Candidatos aceitam outras ofertas durante o processo de validação
+
+#### Comportamento Digital
+
+- Usuária avançada de sistemas de RH
+- Acessa ferramentas via desktop e mobile
+- Valoriza integrações com sistemas existentes
+- Espera processos automatizados e self-service
+
+#### Informações Necessárias do Usuário
+
+- Hash do certificado para verificação
+- Data e hora da verificação (log)
+- IP do solicitante
+- Resultado da verificação
+- Identificação da empresa verificadora (opcional)
+
+---
+
+# Mapa de Empatia
+
+## Mapa de Empatia - Persona Primária: Lucas Mendes (Estudante)
+
+### O que VÊ
+
+- Vagas de emprego exigindo "diploma obrigatório"
+- Colegas de turma sendo contratados
+- Prazos de processos seletivos se aproximando
+- Posts no LinkedIn de recrutadores com requisitos rigorosos
+- Grupos de WhatsApp discutindo sobre emprego
+
+### O que OUVE
+
+- Pais perguntando sobre emprego
+- Recrutadores: "Preciso do diploma autenticado para prosseguir"
+- Secretaria: "O diploma sai em 8-12 meses"
+- Colegas reclamando de custos com cartório
+- "Perdi oportunidade porque não tinha o diploma"
+
+### O que DIZ e FAZ
+
+- "Quando meu diploma vai ficar pronto?"
+- Acessa sites de emprego diariamente
+- Liga para secretaria perguntando sobre o diploma
+- Compartilha declaração de conclusão por email
+- Vai ao cartório reconhecer firma
+- Calcula gastos: "R$ 18 por processo seletivo"
+
+### O que PENSA e SENTE
+
+**Pensamentos:**
+
+- "Por que demora tanto para emitir o diploma?"
+- "E se eu perder uma oportunidade por causa da burocracia?"
+- "Como posso provar que realmente me formei?"
+
+**Sentimentos:**
+
+- Ansiedade com pressão familiar
+- Frustração com processos burocráticos
+- Insegurança de perder oportunidades
+- Esperança na área de tecnologia
+
+**Expectativas:**
+
+- Acesso imediato ao diploma digital
+- Compartilhamento fácil via link ou QR Code
+- Interface mobile-friendly
+- Custo zero ou muito baixo
+
+### DORES
+
+1. **Demora:** Espera de 6-12 meses para diploma físico
+2. **Custos:** R$ 15-30 por autenticação que se acumulam
+3. **Burocracia:** Necessidade de ir presencialmente ao cartório
+4. **Falta de Controle:** Dependência total da universidade
+5. **Comprovação:** Dificuldade em provar formação para empresas de outros estados
+
+### GANHOS
+
+1. **Velocidade:** Acesso imediato ao diploma digital
+2. **Economia:** Zero gastos com autenticações
+3. **Praticidade:** Acesso 24/7 via smartphone
+4. **Controle:** Poder compartilhar credenciais quando quiser
+5. **Segurança:** Certificado impossível de falsificar
+6. **Competitividade:** Resposta rápida a oportunidades de emprego
+
+---
+
+## Mapa de Empatia - Persona Secundária: Ana Carolina (Recrutadora)
+
+### O que VÊ
+
+- Dezenas de currículos e PDFs de diplomas
+- Prazos apertados para fechamento de vagas
+- Notícias sobre fraudes em diplomas
+- Métricas de tempo de contratação
+- Concorrentes fechando vagas mais rapidamente
+
+### O que OUVE
+
+- Gestores: "Preciso desse profissional começando semana que vem"
+- Candidatos: "Quanto tempo demora o processo?"
+- Secretarias: "Não temos como confirmar por telefone"
+- Compliance: "Precisamos de comprovação para auditoria"
+- Mercado: "Empresa X contratou candidato com diploma falso"
+
+### O que DIZ e FAZ
+
+- "Pode enviar o diploma autenticado por email?"
+- Solicita diplomas dos candidatos finalistas
+- Liga para universidades pedindo confirmação
+- Confere visualmente se o PDF parece autêntico
+- Consulta site do MEC
+- Contrata serviços de background check
+- Arquiva cópias para auditoria
+
+### O que PENSA e SENTE
+
+**Pensamentos:**
+
+- "Como garantir que esse diploma é verdadeiro?"
+- "Estamos perdendo candidatos porque nosso processo é lento"
+- "Deveria existir um sistema centralizado de verificação"
+
+**Sentimentos:**
+
+- Responsabilidade em não contratar errado
+- Pressão entre velocidade e segurança
+- Frustração com processos manuais
+- Ansiedade de perder bons candidatos
+
+**Expectativas:**
+
+- Verificação instantânea e online 24/7
+- Interface simples
+- Resultado claro: válido ou inválido
+- Histórico auditável
+- Custo acessível
+
+### DORES
+
+1. **Tempo:** Validação manual de 2-5 dias por candidato
+2. **Insegurança:** Dificuldade em identificar falsificações
+3. **Custos:** R$ 100-300 por verificação terceirizada
+4. **Falta de Padronização:** Cada universidade tem processo diferente
+5. **Compliance:** Necessidade de documentar todas as verificações
+6. **Experiência:** Processo lento prejudica employer branding
+
+### GANHOS
+
+1. **Velocidade:** Verificação instantânea (segundos em vez de dias)
+2. **Segurança:** 100% de certeza na autenticidade
+3. **Economia:** Redução em serviços de background check
+4. **Compliance:** Registro automático de verificações
+5. **Competitividade:** Processos 3-5 dias mais rápidos
+6. **Escalabilidade:** Sistema funciona 24/7 sem intervenção humana
