@@ -722,39 +722,3 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 **Frequência:** 5-10 casos por mês
 
----
-
-## **MÉTRICAS DA JORNADA**
-
-| Atividade | Tempo | Frequência | Economia vs. Processo Anterior |
-|-----------|-------|------------|-------------------------------|
-| Preparação (verificar lista) | 15-20 min | Semestral | 70% mais rápido |
-| Gestão de pendências | 20-30 min | Semanal | 50% mais rápido |
-| Emissão em lote (236 diplomas) | 2-3 horas | Semestral | 90% mais rápido |
-| Emissão individual | 7-10 min | 5-10/semana | 60% mais rápido |
-| Correção de diploma | 10-15 min | 2-5/mês | 80% mais rápido |
-| Verificação empresas | 2-3 min | 10-15/mês | 95% mais rápido |
-| Relatórios | 5-10 min | Mensal | 85% mais rápido |
-
----
-
-## **PONTOS DE SATISFAÇÃO**
-
-✅ **Eficiência brutal:** Emitir 236 diplomas em 2-3h vs 2-3 meses antes  
-✅ **Controle total:** Acompanha todo o processo em tempo real  
-✅ **Menos estresse:** Sem dependência de gráfica ou processos manuais  
-✅ **Rapidez nas verificações:** 2 minutos vs 30-60 minutos antes  
-✅ **Autonomia:** Pode corrigir erros sem reemitir fisicamente  
-✅ **Profissionalismo:** Sistema moderno valoriza a instituição  
-✅ **Qualidade de vida:** Menos horas extras, menos pressão
-
----
-
-## **PRINCIPAIS EXPECTATIVAS DA MARIA**
-
-🎯 **Confiabilidade:** Sistema tem que funcionar sem falhas  
-🎯 **Velocidade:** Tudo tem que ser rápido - ela tem prazo  
-🎯 **Simplicidade:** Não pode ser complicado, equipe tem que usar fácil  
-🎯 **Segurança:** Dados protegidos, sem risco de fraude  
-🎯 **Suporte:** Ajuda rápida quando precisar  
-🎯 **Validação:** Sistema tem que ser aceito por empresas e MEC
