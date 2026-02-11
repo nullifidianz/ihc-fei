@@ -32,7 +32,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ---
 
-## Persona Primária 1: Coordenadora de Secretaria Acadêmica
+## Persona Primária 1: Coordenadora de Secretaria Acadêmica (Resp. Leandro Brito de Alencar)
 
 ![Foto Maria Eduarda](https://thispersondoesnotexist.com/)
 
@@ -79,12 +79,13 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ---
 
-## Persona Primária 2: Estudante/Recém-Formado
+## Persona Primária 2: Estudante/Recém-Formado (Resp. Thales Clemente Pasquotto)
 
 ![Foto Lucas Mendes](https://thispersondoesnotexist.com/)
 
 ### Lucas Mendes
 
+> Inicialmente uma Persona secundária, aguardando a Persona primária 1 realizar sua ações em sistema.
 **Idade:** 24 anos  
 **Situação:** Recém-formado buscando primeiro emprego  
 **Formação:** Engenharia da Computação  
@@ -128,7 +129,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ---
 
-## Persona Primária 3: Recrutadora/Empresa Verificadora
+## Persona Primária 3: Recrutadora/Empresa Verificadora (Resp. João Paulo Paggi Zuanon Dias)
 
 ![Foto Ana Carolina](https://thispersondoesnotexist.com/)
 
