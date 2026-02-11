@@ -71,12 +71,6 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 - Utiliza sistemas de gestão acadêmica diariamente
 - Prefere interfaces intuitivas e suporte técnico disponível
 
-#### Informações Necessárias do Usuário
-
-- Dados cadastrais da instituição (CNPJ, razão social, endereço)
-- Dados dos operadores (nome, CPF, email, cargo)
-- Histórico de certificados emitidos
-
 ---
 
 ## Persona Primária 2: Estudante/Recém-Formado (Resp. Thales Clemente Pasquotto)
@@ -117,12 +111,6 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 - Acessa serviços principalmente via smartphone
 - Valoriza interfaces modernas
 - Compartilha documentos digitalmente (PDF, links)
-
-#### Informações Necessárias do Usuário
-
-- Dados pessoais (nome, CPF, RG, data de nascimento)
-- Email pessoal e telefone
-- Dados acadêmicos (curso, data de conclusão)
 
 ---
 
@@ -166,14 +154,6 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 - Acessa ferramentas via desktop e mobile
 - Valoriza integrações com sistemas existentes
 - Espera processos automatizados e self-service
-
-#### Informações Necessárias do Usuário
-
-- Hash do certificado para verificação
-- Data e hora da verificação (log)
-- IP do solicitante
-- Resultado da verificação
-- Identificação da empresa verificadora (opcional)
 
 ---
 
