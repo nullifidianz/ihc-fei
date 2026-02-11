@@ -34,7 +34,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ## Persona Primária 1: Coordenadora de Secretaria Acadêmica (Resp. Leandro Brito de Alencar)
 
-![Foto Maria Eduarda](coordenadora.jpg)
+![Foto Maria Eduarda](coordenadora.png)
 
 ### Maria Eduarda Santos
 
@@ -131,7 +131,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ## Persona Primária 3: Recrutadora/Empresa Verificadora (Resp. João Paulo Paggi Zuanon Dias)
 
-![Foto Ana Carolina](recrutadora.jpg)
+![Foto Ana Carolina](recrutadora.png)
 
 ### Ana Carolina Ferreira
 
@@ -247,74 +247,3 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 4. **Controle:** Poder compartilhar credenciais quando quiser
 5. **Segurança:** Certificado impossível de falsificar
 6. **Competitividade:** Resposta rápida a oportunidades de emprego
-
----
-
-## Mapa de Empatia - Persona Secundária: Ana Carolina (Recrutadora)
-
-### O que VÊ
-
-- Dezenas de currículos e PDFs de diplomas
-- Prazos apertados para fechamento de vagas
-- Notícias sobre fraudes em diplomas
-- Métricas de tempo de contratação
-- Concorrentes fechando vagas mais rapidamente
-
-### O que OUVE
-
-- Gestores: "Preciso desse profissional começando semana que vem"
-- Candidatos: "Quanto tempo demora o processo?"
-- Secretarias: "Não temos como confirmar por telefone"
-- Compliance: "Precisamos de comprovação para auditoria"
-- Mercado: "Empresa X contratou candidato com diploma falso"
-
-### O que DIZ e FAZ
-
-- "Pode enviar o diploma autenticado por email?"
-- Solicita diplomas dos candidatos finalistas
-- Liga para universidades pedindo confirmação
-- Confere visualmente se o PDF parece autêntico
-- Consulta site do MEC
-- Contrata serviços de background check
-- Arquiva cópias para auditoria
-
-### O que PENSA e SENTE
-
-**Pensamentos:**
-
-- "Como garantir que esse diploma é verdadeiro?"
-- "Estamos perdendo candidatos porque nosso processo é lento"
-- "Deveria existir um sistema centralizado de verificação"
-
-**Sentimentos:**
-
-- Responsabilidade em não contratar errado
-- Pressão entre velocidade e segurança
-- Frustração com processos manuais
-- Ansiedade de perder bons candidatos
-
-**Expectativas:**
-
-- Verificação instantânea e online 24/7
-- Interface simples
-- Resultado claro: válido ou inválido
-- Histórico auditável
-- Custo acessível
-
-### DORES
-
-1. **Tempo:** Validação manual de 2-5 dias por candidato
-2. **Insegurança:** Dificuldade em identificar falsificações
-3. **Custos:** R$ 100-300 por verificação terceirizada
-4. **Falta de Padronização:** Cada universidade tem processo diferente
-5. **Compliance:** Necessidade de documentar todas as verificações
-6. **Experiência:** Processo lento prejudica employer branding
-
-### GANHOS
-
-1. **Velocidade:** Verificação instantânea (segundos em vez de dias)
-2. **Segurança:** 100% de certeza na autenticidade
-3. **Economia:** Redução em serviços de background check
-4. **Compliance:** Registro automático de verificações
-5. **Competitividade:** Processos 3-5 dias mais rápidos
-6. **Escalabilidade:** Sistema funciona 24/7 sem intervenção humana
