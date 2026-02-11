@@ -53,7 +53,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 #### Objetivos e Motivações
 
-- Reduzir tempo de emissão de diplomas (atualmente 6-12 meses)
+- Reduzir tempo de emissão de diplomas
 - Diminuir casos de fraude e falsificação de documentos
 - Facilitar o trabalho da equipe de secretaria
 - Melhorar a imagem da instituição com tecnologia
@@ -108,9 +108,6 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 #### Dores e Desafios
 
-- Demora excessiva para receber diploma físico (6-12 meses)
-- Custos de R$ 15-30 por autenticação em cartório
-- Necessidade de ir presencialmente ao cartório
 - Dificuldade em comprovar formação para empresas de outros estados
 - Risco de perda ou dano do documento físico
 
@@ -157,7 +154,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 #### Dores e Desafios
 
-- Tempo gasto em validações manuais de diplomas (2-5 dias por candidato)
+- Tempo gasto em validações manuais de diplomas
 - Dificuldade em verificar autenticidade de documentos digitalizados
 - Dependência de contato com universidades (nem sempre responsivas)
 - Custos de R$ 100-300 por verificação em serviços terceirizados
