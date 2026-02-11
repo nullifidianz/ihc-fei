@@ -34,7 +34,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ## Persona Primária 1: Coordenadora de Secretaria Acadêmica (Resp. Leandro Brito de Alencar)
 
-![Foto Maria Eduarda](https://thispersondoesnotexist.com/)
+![Foto Maria Eduarda](coordenadora.jpg)
 
 ### Maria Eduarda Santos
 
@@ -81,7 +81,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ## Persona Primária 2: Estudante/Recém-Formado (Resp. Thales Clemente Pasquotto)
 
-![Foto Lucas Mendes](https://thispersondoesnotexist.com/)
+![Foto Lucas Mendes](estudante.jpg)
 
 ### Lucas Mendes
 
@@ -131,7 +131,7 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ## Persona Primária 3: Recrutadora/Empresa Verificadora (Resp. João Paulo Paggi Zuanon Dias)
 
-![Foto Ana Carolina](https://thispersondoesnotexist.com/)
+![Foto Ana Carolina](recrutadora.jpg)
 
 ### Ana Carolina Ferreira
 
