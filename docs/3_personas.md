@@ -32,14 +32,14 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 
 ---
 
-## Persona Primária 1: Coordenadora de Secretaria Acadêmica (Resp. Leandro Brito de Alencar)
+## Persona Primária 1: Analista de Emissão de Diplomas (Resp. Leandro Brito de Alencar)
 
 ![Foto Maria Eduarda](coordenadora.png)
 
 ### Maria Eduarda Santos
 
 **Idade:** 42 anos  
-**Cargo:** Coordenadora da Secretaria Acadêmica  
+**Cargo:** Analista de Emissão de Diplomas
 **Instituição:** Universidade privada de médio porte (5.000 alunos)  
 **Localização:** São Paulo, SP
 
@@ -226,479 +226,498 @@ Este projeto destina-se a três grupos principais de usuários no ecossistema de
 6. **Competitividade:** Resposta rápida a oportunidades de emprego
 
 # Jornada do Usuário - Maria Eduarda Santos
-## Coordenadora de Secretaria Acadêmica - Emissão de Diplomas
+## Analista de Emissão de Diplomas
 
 ---
 
-## **FASE 1: PREPARAÇÃO - IDENTIFICAÇÃO DOS FORMANDOS**
+## **CONTEXTO INICIAL**
 
-### Etapa 1.1: Verificar Lista de Potenciais Formandos
-**Touchpoint:** Dashboard - Menu "Formandos"
+Maria trabalha no setor de emissão de diplomas da universidade. Ela recebe da secretaria acadêmica a lista de alunos que já colaram grau e estão com status "Formando" no sistema acadêmico. Seu trabalho é emitir os diplomas digitais desses formandos.
 
-**Momento:** Início de novembro (1-2 meses antes da formatura)
-
-**Ações:**
-- Faz login no sistema
-- Acessa menu "Formandos do Semestre"
-- Visualiza lista importada do sistema acadêmico com 250 alunos
-- Lista mostra:
-  - Nome do aluno
-  - Curso
-  - Matrícula
-  - Status acadêmico
-  - Status financeiro
-  - Pendências (se houver)
-
-**Pensamentos:**
-- "Quantos alunos estão aptos a formar?"
-- "Quem tem pendências que preciso resolver?"
-- "Tenho tempo hábil para resolver tudo?"
-
-**Sentimentos:**
-- 😰 Ansiedade ao ver pendências
-- 🎯 Foco em organizar o trabalho
-
-**Expectativas:**
-- Lista clara e organizada
-- Filtros por status (apto/pendente)
-- Indicadores visuais de pendências
-
-**Tempo estimado:** 15-20 minutos
+**Momento:** Início de dezembro, logo após a colação de grau  
+**Situação:** 238 alunos colaram grau e estão aguardando diploma
 
 ---
 
-### Etapa 1.2: Filtrar e Identificar Pendências
-**Touchpoint:** Dashboard - Filtros e busca
+## **FASE 1: RECEBIMENTO E IMPORTAÇÃO DOS DADOS**
+
+### Etapa 1.1: Receber Lista de Formandos
+**Touchpoint:** Email da secretaria acadêmica
 
 **Ações:**
-- Aplica filtro "Com Pendências"
-- Identifica 35 alunos com problemas:
-  - 20 com pendência financeira (mensalidades)
-  - 10 com pendência documental (RG, foto, etc)
-  - 5 com pendência acadêmica (matéria em recuperação)
-- Exporta lista de pendências para Excel
-- Encaminha para departamentos responsáveis
+- Recebe email da secretaria com arquivo CSV anexo
+- Lista contém 238 formandos com status "Formando"
+- Arquivo inclui: nome, CPF, RG, data nascimento, curso, data conclusão, matrícula
+- Salva arquivo no computador
 
 **Pensamentos:**
-- "Preciso resolver isso logo"
-- "Quem eu preciso acionar para cada tipo de pendência?"
+- "Mais 238 diplomas para emitir"
+- "Vou conseguir processar tudo hoje"
 
 **Sentimentos:**
-- 😤 Frustração com pendências recorrentes
-- 💼 Responsabilidade de resolver
+- 💼 Rotina de trabalho
+- 🎯 Foco na tarefa
+
+**Tempo estimado:** 2 minutos
+
+---
+
+### Etapa 1.2: Importar CSV no Sistema
+**Touchpoint:** Dashboard - "Nova Emissão em Lote"
+
+**Ações:**
+- Faz login no sistema blockchain de diplomas
+- Acessa dashboard principal
+- Clica em "Nova Emissão em Lote"
+- Escolhe opção "Importar CSV"
+- Seleciona arquivo recebido da secretaria
+- Sistema processa e valida dados automaticamente
+- Sistema exibe resultado:
+  - 238 registros encontrados
+  - 238 CPFs válidos
+  - 0 duplicados
+  - 2 alertas (erros de digitação ou dados inconsistentes)
+
+**Pensamentos:**
+- "Espero que não tenha muitos erros no arquivo"
+- "Esses alertas são importantes, preciso revisar"
+
+**Sentimentos:**
+- 😌 Alívio ao ver validação automática
+- 😰 Preocupação com os alertas
 
 **Expectativas:**
-- Detalhamento claro de cada pendência
-- Possibilidade de exportar listas
-- Filtros múltiplos (por tipo de pendência, curso, etc)
+- Validação automática de CPFs
+- Detecção de duplicados
+- Alertas claros sobre problemas
+- Importação rápida (menos de 1 minuto)
 
 **Pontos de Fricção:**
-- ⚠️ Informações de pendências desatualizadas
-- ⚠️ Não saber quem acionar para resolver
+- ⚠️ Arquivo CSV com formatação incorreta
+- ⚠️ Muitos erros que exigem correção manual
+- ⚠️ Sistema não detectar problemas óbvios
 
-**Tempo estimado:** 30-40 minutos
-
----
-
-### Etapa 1.3: Acompanhar Resolução de Pendências
-**Touchpoint:** Dashboard + Email
-
-**Momento:** Novembro (acompanhamento semanal)
-
-**Ações:**
-- Acessa sistema semanalmente
-- Verifica status atualizado das pendências
-- Vê que 15 alunos resolveram problemas financeiros
-- 8 entregaram documentos faltantes
-- Restam 12 casos para resolver
-- Liga para alunos com pendências críticas
-
-**Pensamentos:**
-- "Estamos conseguindo resolver a tempo?"
-- "Falta quanto tempo para a colação?"
-
-**Sentimentos:**
-- 😊 Satisfação ao ver pendências sendo resolvidas
-- 😰 Preocupação com casos não resolvidos
-
-**Expectativas:**
-- Atualização automática de status
-- Notificações quando pendência for resolvida
-- Dashboard com progresso visual
-
-**Tempo estimado:** 20-30 minutos por semana (3-4 verificações)
+**Tempo estimado:** 3-5 minutos
 
 ---
 
-## **FASE 2: EMISSÃO EM LOTE - SEMANA DA FORMATURA**
-
-### Etapa 2.1: Confirmação Final de Formandos
-**Touchpoint:** Dashboard - Menu "Emissão de Diplomas"
-
-**Momento:** 1 semana antes da colação de grau
+### Etapa 1.3: Revisar Alertas e Separar Casos Problemáticos
+**Touchpoint:** Tela de validação
 
 **Ações:**
-- Acessa lista atualizada de formandos
-- Verifica que 238 alunos estão aptos (12 ainda com pendências)
-- Aplica filtro "Aptos para Formatura"
-- Revisa dados básicos:
-  - Nomes corretos (confere com RG)
-  - CPF válido
-  - Data de conclusão correta
-  - Curso e modalidade corretos
+- Clica para ver detalhes dos 2 alertas
+- Alerta 1: "Ana Paula Costa Silva - Nome contém 'PAula' (possível erro)"
+- Alerta 2: "João Pedro Santos - Data nascimento 1952 (verificar)"
+- Decide processar esses 2 casos separadamente depois
+- Desmarca os 2 registros com problema
+- Mantém 236 registros para emissão em lote
+- Clica em "Confirmar Importação"
+- Sistema carrega os 236 formandos validados
 
 **Pensamentos:**
-- "Todos os dados estão corretos?"
-- "E se tiver algum erro depois de emitir?"
+- "Melhor deixar esses 2 para fazer com cuidado depois"
+- "236 já está ótimo, vou processar em lote"
 
 **Sentimentos:**
-- 😰 Tensão com responsabilidade
-- 🎯 Concentração máxima
+- 🎯 Decisão pragmática
+- 😊 Satisfação com a maioria validada
 
 **Expectativas:**
-- Validação automática de CPF
-- Destaque para dados inconsistentes
-- Possibilidade de revisar antes de emitir
+- Alertas claros e acionáveis
+- Possibilidade de desmarcar registros problemáticos
+- Confirmação do que será processado
 
-**Pontos de Fricção:**
-- ⚠️ Dados importados incorretamente do sistema acadêmico
-- ⚠️ Nomes com caracteres especiais ou acentuação errada
-
-**Tempo estimado:** 1-2 horas (revisão detalhada)
+**Tempo estimado:** 5-7 minutos
 
 ---
 
-### Etapa 2.2: Seleção para Emissão em Lote
-**Touchpoint:** Dashboard - Seleção múltipla
+## **FASE 2: EMISSÃO EM LOTE**
+
+### Etapa 2.1: Revisar Amostra de Dados
+**Touchpoint:** Lista de formandos importados
 
 **Ações:**
-- Seleciona todos os 238 formandos aptos
-- Ou seleciona por curso (ex: 45 de Engenharia Civil)
-- Clica em "Preparar Emissão em Lote"
-- Sistema gera preview de todos os diplomas
-- Pode visualizar diplomas individuais se necessário
+- Visualiza lista dos 236 formandos
+- Aplica filtro por curso (ex: "Engenharia da Computação")
+- Abre 5-6 registros aleatórios para conferir
+- Verifica: nome correto, CPF, datas, curso
+- Compara com CSV original em alguns casos
+- Remove filtro e volta para lista completa
 
 **Pensamentos:**
-- "Posso emitir todos de uma vez?"
-- "E se tiver algum erro no meio?"
+- "Preciso ter certeza que está tudo certo"
+- "Depois de emitir não tem volta fácil"
 
 **Sentimentos:**
-- 😅 Alívio por não ter que fazer um por um
-- 😰 Medo de erros em massa
+- 😰 Responsabilidade com os dados
+- 🔍 Atenção aos detalhes
 
 **Expectativas:**
-- Seleção fácil (checkbox, selecionar todos)
-- Preview antes de confirmar
-- Possibilidade de emitir por lotes menores (por curso)
+- Filtros funcionais por curso, nome, data
+- Visualização clara dos dados
+- Fácil navegação entre registros
 
 **Tempo estimado:** 10-15 minutos
 
 ---
 
-### Etapa 2.3: Revisão de Preview em Lote
-**Touchpoint:** Tela de preview
+### Etapa 2.2: Preparar Emissão em Lote
+**Touchpoint:** Botão "Emitir Diplomas"
 
 **Ações:**
-- Visualiza amostra de diplomas gerados
-- Confere template, logo, assinaturas
-- Verifica dados de 5-10 diplomas aleatórios
-- Identifica 2 erros:
-  - 1 nome com grafia incorreta
-  - 1 data de conclusão errada
-- Remove esses 2 da seleção para corrigir depois
-- Mantém 236 para emissão
+- Seleciona todos os 236 registros (checkbox global)
+- Clica em "Emitir 236 Diplomas"
+- Sistema exibe tela de confirmação com resumo:
+  - Total: 236 diplomas
+  - Distribuição por curso
+  - Data de emissão: 09/12/2024
+  - Assinantes: Reitor + Maria (emissora)
+- Sistema gera preview automático
+- Mensagem: "Gerando preview... aguarde 2-3 minutos"
 
 **Pensamentos:**
-- "Melhor conferir bem agora do que ter problema depois"
-- "236 já está ótimo, resolvo os 2 depois"
+- "Vai dar tudo certo"
+- "Tomara que não trave"
 
 **Sentimentos:**
-- 😰 Tensão ao encontrar erros
-- 😌 Alívio por ter conferido antes
+- 😰 Ansiedade pela emissão em massa
+- 🤞 Esperança que funcione sem problemas
 
 **Expectativas:**
-- Preview claro e legível
-- Navegação fácil entre diplomas
-- Possibilidade de remover itens da seleção
+- Resumo claro antes de confirmar
+- Preview para revisar
+- Tempo de processamento aceitável
 
-**Pontos de Fricção:**
-- ⚠️ Preview demorar muito para carregar
-- ⚠️ Não conseguir visualizar todos os detalhes
-
-**Tempo estimado:** 20-30 minutos
+**Tempo estimado:** 3-5 minutos (aguardando preview)
 
 ---
 
-### Etapa 2.4: Confirmação e Emissão em Lote
-**Touchpoint:** Botão de confirmação
+### Etapa 2.3: Revisar Preview dos Diplomas
+**Touchpoint:** Galeria de previews
 
 **Ações:**
-- Revisa resumo da emissão:
-  - 236 diplomas
-  - Cursos contemplados
-  - Data de emissão
-- Clica em "Confirmar Emissão em Lote"
-- Sistema processa (barra de progresso)
-- Cada diploma é:
-  - Gerado com hash único
-  - Registrado na blockchain
-  - Preparado para envio ao aluno
-- Recebe confirmação: "236 diplomas emitidos com sucesso"
+- Sistema exibe galeria com miniaturas dos 236 diplomas
+- Visualiza amostra de 8-10 diplomas em tamanho maior
+- Confere elementos visuais:
+  - Logo da universidade no lugar certo
+  - Nome do formando legível
+  - Assinaturas digitais presentes
+  - Datas corretas
+  - Layout consistente
+- Navega entre diferentes cursos para ver variações
+- Tudo parece correto
 
 **Pensamentos:**
-- "Vai dar tudo certo?"
-- "Quanto tempo vai demorar?"
+- "O template está bonito"
+- "Parece tudo ok, posso confirmar"
 
 **Sentimentos:**
-- 😰 Ansiedade durante o processamento
-- 🎉 Alívio e satisfação ao completar
-- 💪 Orgulho do trabalho realizado
+- 😊 Satisfação visual com os diplomas
+- ✅ Confiança para prosseguir
 
 **Expectativas:**
-- Processamento rápido (poucos minutos)
-- Barra de progresso clara
-- Confirmação inequívoca de sucesso
-- Não travar ou dar erro
+- Preview claro e navegável
+- Zoom funcional
+- Carregamento rápido das imagens
 
 **Pontos de Fricção:**
-- ⚠️ Sistema travar durante processamento
-- ⚠️ Emissão parcial (alguns dão erro)
-- ⚠️ Falta de feedback durante o processo
+- ⚠️ Preview demorando muito para carregar
+- ⚠️ Imagens em baixa resolução
+- ⚠️ Não conseguir ampliar para ver detalhes
+
+**Tempo estimado:** 8-12 minutos
+
+---
+
+### Etapa 2.4: Confirmar e Processar Emissão
+**Touchpoint:** Botão "Confirmar Emissão"
+
+**Ações:**
+- Revisa resumo final uma última vez
+- Clica em "Confirmar Emissão em Lote"
+- Sistema exibe mensagem: "Tem certeza? Esta ação não pode ser desfeita."
+- Confirma novamente
+- Sistema inicia processamento:
+  - Barra de progresso: "Emitindo diploma 1 de 236..."
+  - Para cada diploma:
+    - Gera hash único
+    - Registra na blockchain
+    - Prepara email de notificação
+- Processo leva cerca de 5-8 minutos
+- Tela final: "✅ 236 diplomas emitidos com sucesso!"
+
+**Pensamentos:**
+- "Vai demorar quanto tempo?"
+- "Tomara que não dê erro no meio"
+
+**Sentimentos:**
+- 😰 Tensão durante processamento
+- 🎉 Alívio e satisfação ao finalizar
+- 💪 Orgulho do trabalho
+
+**Expectativas:**
+- Barra de progresso clara
+- Processamento sem travamentos
+- Confirmação inequívoca de sucesso
+- Tempo razoável (máximo 10 minutos)
+
+**Pontos de Fricção:**
+- ⚠️ Sistema travar no meio
+- ⚠️ Emissão parcial (alguns darem erro)
+- ⚠️ Falta de feedback durante processo
+- ⚠️ Demora excessiva (mais de 15 minutos)
 
 **Tempo estimado:** 5-10 minutos (processamento)
 
 ---
 
-### Etapa 2.5: Notificação Automática aos Alunos
-**Touchpoint:** Sistema automático + Painel de controle
+### Etapa 2.5: Monitorar Envio de Notificações
+**Touchpoint:** Dashboard de notificações
 
 **Ações:**
-- Sistema envia email automaticamente para os 236 alunos
-- Email contém:
-  - Link personalizado para acessar diploma
-  - QR Code para validação
-  - Instruções de acesso
-  - Informações sobre como compartilhar
-- Maria visualiza dashboard de notificações:
-  - 236 emails enviados
-  - 180 emails entregues
-  - 40 abertos
-  - 16 pendentes
-- Identifica emails que falharam (domínio inválido, caixa cheia)
+- Sistema envia email automaticamente para cada formando
+- Email contém link para acessar diploma + QR Code
+- Maria acessa painel "Status de Notificações"
+- Visualiza métricas em tempo real:
+  - 236 emails na fila de envio
+  - 220 enviados com sucesso
+  - 14 em processamento
+  - 2 falharam (email inválido)
+- Anota os 2 casos de falha para avisar secretaria
+- Acompanha durante 10 minutos até todos serem enviados
 
 **Pensamentos:**
-- "Todos receberam?"
-- "E os que não receberam, como aviso?"
+- "Quase todos foram entregues, ótimo!"
+- "Preciso avisar a secretaria sobre os 2 emails inválidos"
 
 **Sentimentos:**
-- 😊 Satisfação ao ver emails sendo entregues
-- 😰 Preocupação com falhas de entrega
+- 😊 Satisfação com automação
+- 📊 Controle sobre o processo
 
 **Expectativas:**
-- Envio automático e confiável
-- Dashboard de acompanhamento
-- Alerta de falhas de entrega
-- Possibilidade de reenviar individualmente
+- Dashboard de acompanhamento em tempo real
+- Identificação clara de falhas
+- Possibilidade de reenviar manualmente
 
-**Tempo estimado:** 5 minutos (monitoramento inicial)
+**Tempo estimado:** 10-15 minutos (monitoramento)
 
 ---
 
-## **FASE 3: CASOS INDIVIDUAIS**
+## **FASE 3: EMISSÃO INDIVIDUAL (CASOS ESPECIAIS)**
 
-### Etapa 3.1: Emissão Individual (Casos Especiais)
-**Touchpoint:** Dashboard - Menu "Novo Diploma"
+### Etapa 3.1: Resolver Caso com Erro de Digitação
+**Touchpoint:** Menu "Emitir Diploma Individual"
 
-**Momento:** Após emissão em lote ou casos pontuais
+**Momento:** Depois da emissão em lote
 
 **Ações:**
+- Lembra dos 2 casos separados (Ana Paula e João Pedro)
+- Entra em contato com secretaria para validar dados corretos
+- Secretaria confirma: "Ana Paula" (sem erro) e João nasceu em 2002
 - Acessa "Emitir Diploma Individual"
-- Caso 1: Aluno resolveu pendência após lote
-- Caso 2: Um dos 2 diplomas com erro foi corrigido
-- Preenche dados manualmente:
-  - Nome completo
-  - CPF
-  - RG
-  - Data de nascimento
-  - Curso
-  - Data de ingresso
-  - Data de conclusão
-- Faz upload de documento comprobatório (histórico)
-- Revisa preview
+- Preenche formulário manualmente:
+  - Nome: Ana Paula Costa Silva
+  - CPF: xxx.xxx.xxx-xx
+  - RG: xx.xxx.xxx-x
+  - Data nascimento: 15/03/2001
+  - Curso: Administração
+  - Data ingresso: 01/02/2020
+  - Data conclusão: 06/12/2024
+  - Matrícula: 20200001
+- Faz upload do histórico escolar (PDF)
+- Sistema gera preview do diploma
+- Revisa com atenção redobrada
 - Confirma emissão
+- Sistema registra na blockchain
+- Email enviado automaticamente para Ana Paula
 
 **Pensamentos:**
-- "Os dados estão todos corretos agora?"
-- "Conferi o nome três vezes?"
+- "Agora sim, dados corretos"
+- "Melhor conferir três vezes antes de emitir"
 
 **Sentimentos:**
-- 🎯 Atenção redobrada
-- 😌 Tranquilidade por ser caso a caso
+- 🎯 Atenção máxima aos detalhes
+- 😌 Tranquilidade por resolver
 
 **Expectativas:**
 - Formulário intuitivo
-- Validações automáticas (CPF, datas)
+- Validação automática de CPF
 - Preview antes de confirmar
+- Campos obrigatórios marcados
 
 **Pontos de Fricção:**
-- ⚠️ Ter que preencher muitos campos manualmente
-- ⚠️ Não poder copiar dados de outro sistema
+- ⚠️ Muitos campos para preencher manualmente
+- ⚠️ Validações muito rígidas
+- ⚠️ Upload de documentos falhar
 
-**Tempo estimado:** 7-10 minutos por diploma
+**Tempo estimado:** 8-12 minutos por diploma
 
-**Frequência:** 5-10 casos por semana
+**Frequência:** 2-10 casos por lote
 
 ---
 
-### Etapa 3.2: Correção de Diploma Emitido
-**Touchpoint:** Dashboard - Menu "Diplomas Emitidos"
+### Etapa 3.2: Emitir Diploma Atrasado
+**Touchpoint:** Menu "Emitir Diploma Individual"
 
-**Momento:** Dias após a emissão
+**Momento:** Semanas após emissão em lote
 
 **Ações:**
-- Aluno liga: "Meu nome está com acento errado!"
-- Maria busca o diploma pelo CPF ou nome
-- Localiza o diploma emitido
-- Verifica o erro
-- Clica em "Solicitar Correção"
-- Preenche justificativa: "Nome com grafia incorreta - faltou acento"
-- Anexa cópia do RG do aluno
-- Sistema:
-  - Invalida diploma anterior
-  - Gera novo diploma corrigido
-  - Cria registro de correção na blockchain
-  - Envia novo diploma ao aluno
+- Recebe solicitação da secretaria: aluno resolveu pendência tardia
+- Aluno João Pedro Santos regularizou situação
+- Acessa "Emitir Diploma Individual"
+- Preenche dados do João Pedro
+- Segue mesmo fluxo da etapa anterior
+- Emite diploma individual
 
 **Pensamentos:**
-- "Isso vai ficar registrado como erro?"
-- "O aluno vai receber rápido o corrigido?"
+- "Finalmente resolveu a pendência"
+- "Pelo menos é só mais um"
+
+**Sentimentos:**
+- 😊 Satisfação em resolver caso pendente
+
+**Tempo estimado:** 8-12 minutos
+
+**Frequência:** 3-8 casos por mês
+
+---
+
+## **FASE 4: CORREÇÃO DE DIPLOMAS**
+
+### Etapa 4.1: Receber Solicitação de Correção
+**Touchpoint:** Email ou telefone
+
+**Momento:** Dias/semanas após emissão
+
+**Ações:**
+- Recebe ligação da secretaria: "Formando Lucas Mendes reportou erro no diploma"
+- Erro: nome saiu como "Lucas MEndes" (letra maiúscula errada)
+- Maria anota dados do aluno e tipo de erro
+- Solicita cópia do RG para confirmar grafia correta
+
+**Pensamentos:**
+- "Como isso passou na revisão?"
+- "Vou ter que invalidar e reemitir"
 
 **Sentimentos:**
 - 😰 Preocupação com o erro
-- 😌 Alívio por poder corrigir
-- 🤔 Reflexão sobre como evitar futuros erros
+- 😔 Frustração por retrabalho
+
+**Tempo estimado:** 5 minutos
+
+---
+
+### Etapa 4.2: Localizar e Invalidar Diploma Incorreto
+**Touchpoint:** Menu "Consultar Diplomas"
+
+**Ações:**
+- Acessa menu "Diplomas Emitidos"
+- Busca por "Lucas Mendes" ou CPF
+- Localiza diploma emitido em 09/12/2024
+- Abre detalhes do diploma
+- Visualiza o erro confirmado no PDF
+- Clica em "Solicitar Correção"
+- Sistema abre formulário de justificativa:
+  - Motivo: "Nome com erro de digitação - letra maiúscula incorreta"
+  - Anexa cópia do RG do Lucas
+  - Preenche dados corretos: "Lucas Mendes"
+- Clica em "Confirmar Correção"
+
+**Pensamentos:**
+- "Preciso justificar bem para auditoria"
+- "O sistema vai invalidar o antigo automaticamente?"
+
+**Sentimentos:**
+- 🎯 Foco em fazer correto
+- 😌 Tranquilidade que o processo existe
 
 **Expectativas:**
-- Processo de correção simples
+- Busca eficiente do diploma
+- Formulário de correção claro
+- Registro de justificativa para auditoria
+- Invalidação automática do diploma anterior
+
+**Tempo estimado:** 8-10 minutos
+
+---
+
+### Etapa 4.3: Emitir Diploma Corrigido
+**Touchpoint:** Sistema automático
+
+**Ações:**
+- Sistema processa a correção:
+  - Invalida diploma anterior (marca como "Corrigido")
+  - Gera novo diploma com dados corretos
+  - Cria novo hash na blockchain
+  - Registra histórico de correção (audit trail)
+  - Envia email automático para Lucas:
+    - "Seu diploma foi corrigido"
+    - Link para novo diploma
+    - Explicação sobre o erro
+- Maria recebe confirmação: "Diploma corrigido e reenviado com sucesso"
+- Ela visualiza no sistema:
+  - Diploma antigo: status "Invalidado - Corrigido em 15/12/2024"
+  - Diploma novo: status "Ativo"
+  - Histórico completo da correção
+
+**Pensamentos:**
+- "Pronto, resolvido"
+- "O Lucas já pode acessar o correto"
+
+**Sentimentos:**
+- ✅ Satisfação em resolver
+- 😊 Alívio que foi rápido
+
+**Expectativas:**
+- Processo automático após justificativa
 - Histórico transparente
-- Aluno receber automaticamente versão corrigida
-- Diploma antigo ser invalidado claramente
+- Notificação automática ao aluno
+- Diploma antigo claramente invalidado
 
-**Pontos de Fricção:**
-- ⚠️ Processo burocrático demais
-- ⚠️ Ter que preencher muita justificativa
-- ⚠️ Demora na emissão do corrigido
+**Tempo estimado:** 3-5 minutos (após confirmação)
 
-**Tempo estimado:** 10-15 minutos
+**Tempo total do processo de correção:** 15-20 minutos
 
 **Frequência:** 2-5 casos por mês
 
 ---
 
-## **FASE 4: GESTÃO E ACOMPANHAMENTO**
+## **FASE 5: GESTÃO E CONSULTAS**
 
-### Etapa 4.1: Monitorar Acessos dos Alunos
-**Touchpoint:** Dashboard - Analytics
+### Etapa 5.1: Gerar Relatório Mensal
+**Touchpoint:** Menu "Relatórios"
 
-**Momento:** Dias após emissão
-
-**Ações:**
-- Acessa "Relatório de Acessos"
-- Visualiza métricas:
-  - 236 diplomas emitidos
-  - 180 acessados pelos alunos (76%)
-  - 56 ainda não acessados
-- Filtra "Não Acessados"
-- Identifica alunos que não viram o diploma
-- Envia lembrete manual por email/WhatsApp
-
-**Pensamentos:**
-- "Por que tantos não acessaram ainda?"
-- "Será que o email caiu no spam?"
-
-**Sentimentos:**
-- 😊 Satisfação com alta taxa de acesso
-- 😟 Preocupação com quem não acessou
-
-**Expectativas:**
-- Dashboard visual (gráficos)
-- Métricas claras
-- Filtros por status
-
-**Tempo estimado:** 10-15 minutos
-
-**Frequência:** Semanal no primeiro mês
-
----
-
-### Etapa 4.2: Gerar Relatórios Gerenciais
-**Touchpoint:** Dashboard - Menu "Relatórios"
-
-**Momento:** Final de semestre / Reuniões de gestão
+**Momento:** Final de cada mês
 
 **Ações:**
-- Acessa "Gerar Relatórios"
-- Seleciona período (ex: 2º semestre 2024)
-- Escolhe tipo de relatório:
-  - Total de diplomas emitidos
-  - Diplomas por curso
-  - Taxa de correções
-  - Verificações realizadas
-  - Tempo médio de emissão
-- Gera relatório em PDF
-- Envia para reitoria
+- Acessa menu "Relatórios"
+- Seleciona "Relatório Mensal de Emissões"
+- Define período: dezembro/2024
+- Sistema gera automaticamente:
+  - Total de diplomas emitidos: 238
+  - Distribuição por curso
+  - Correções realizadas: 3
+  - Verificações de empresas: 12
+  - Tempo médio de emissão: 3 horas
+- Visualiza gráficos e tabelas
+- Exporta em PDF
+- Envia para gestora do setor
 
 **Pensamentos:**
-- "Preciso mostrar resultados para diretoria"
-- "Os números estão bons!"
+- "Os números do mês estão bons"
+- "A gestora vai gostar de ver isso"
 
 **Sentimentos:**
-- 😊 Satisfação com resultados
+- 📊 Satisfação com dados organizados
 - 💼 Profissionalismo
 
 **Expectativas:**
-- Relatórios prontos (templates)
-- Exportação em múltiplos formatos
+- Relatórios automáticos
+- Múltiplos formatos de exportação
+- Dados precisos e em tempo real
 - Gráficos visuais
 
-**Tempo estimado:** 5-10 minutos
+**Tempo estimado:** 5-8 minutos
 
-**Frequência:** Mensal ou sob demanda
-
----
-
-### Etapa 4.3: Consultar Histórico de Diplomas
-**Touchpoint:** Dashboard - Menu "Diplomas Emitidos"
-
-**Momento:** Quando necessário (pedidos de 2ª via, consultas)
-
-**Ações:**
-- Aluno liga: "Formei há 2 anos, perdi meu email, como acesso meu diploma?"
-- Maria acessa "Buscar Diplomas"
-- Busca por:
-  - Nome do aluno
-  - CPF
-  - Matrícula
-  - Período de formatura
-- Localiza diploma emitido em 2022
-- Clica em "Reenviar Email"
-- Sistema envia novo email com link de acesso ao aluno
-- Ou gera QR Code para aluno acessar imediatamente
-
-**Pensamentos:**
-- "Ótimo ter tudo registrado e acessível"
-- "Antes eu teria que procurar em arquivo físico"
-
-**Sentimentos:**
-- 😊 Satisfação em resolver rápido
-- 💪 Segurança do sistema
-
-**Expectativas:**
-- Busca rápida e eficiente
-- Histórico completo preservado
-- Reenvio simples
-
-**Tempo estimado:** 3-5 minutos
-
-**Frequência:** 5-10 casos por mês
+**Frequência:** Mensal
 
