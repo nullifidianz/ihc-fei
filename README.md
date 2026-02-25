@@ -29,9 +29,11 @@ Ao utilizar o produto o Usuario recebe como benefício um sistema facilitado e d
 
 - Quais as funcionalidades da ferramenta (visão do usuário)?
 
-Como Universidade consigo: Salvar certificados e diplomas e vinculá-los a alunos cadastrados e verificar a validez dos diplomas.
+Como Universidade, consigo emitir diplomas e gerenciá-los.
 
-Como Estudante consigo: Visualizar meus diplomas e certificados e verificar a validez dos diplomas.
+Como Estudante, consigo visualizar meus diplomas e certificados e verificar a validez dos diplomas.
+
+Como Empresa, consigo acessar a aplicação e validar algum diploma.
 
 - Quais tecnologias e ferramentas computacionais que pretendem usar neste projeto (TCC)?
 
