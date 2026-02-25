@@ -8,6 +8,8 @@
 
 ### Narrativa: Emissão de diplomas após colação de grau com dados inconsistentes e notificação de formandos
 
+### Atores: Maria Eduarda Santos (analista de emissão de diplomas) e Secretaria Acadêmica
+
 Na segunda-feira seguinte à colação de grau de dezembro, Maria Eduarda Santos, analista de emissão de diplomas da Universidade Privada Horizonte, precisa cadastrar e emitir os diplomas digitais dos 238 alunos que colaram grau na sexta-feira anterior. O processo começa quando a secretaria acadêmica envia por e-mail um arquivo CSV exportado do sistema acadêmico da universidade (SIGA) com os dados dos formandos.
 
 Ao tentar importar o arquivo no sistema de emissão de diplomas, Maria recebe uma mensagem de erro informando que o formato do CSV não é compatível. O sistema acadêmico e o sistema de diplomas foram desenvolvidos por fornecedores diferentes e não compartilham o mesmo padrão de exportação. Maria abre o arquivo no Excel, renomeia manualmente as colunas para o padrão esperado e remove a formatação dos campos de CPF antes de tentar a importação novamente.
@@ -35,6 +37,41 @@ Ao encerrar o expediente, Maria ainda não havia notificado 35 dos 236 formandos
 | **Ações** | Correção manual do CSV; busca individual de dados no SIGA; preenchimento manual de campos para cada formando; comparação manual para identificar falhas; envio de e-mails pelo Outlook com endereços buscados no SIGA |
 | **Eventos** | Erro de incompatibilidade do CSV; sessão expirada sem aviso prévio; emissão concluída sem indicação de progresso nem detalhamento das falhas; módulo de e-mail desconfigurado; e-mail inválido devolvido |
 | **Avaliação** | Expediente encerrado com trabalho incompleto: 2 diplomas sem emissão por motivo desconhecido, 35 notificações pendentes, nenhuma resposta sobre os problemas técnicos reportados ao setor de TI |
+
+---
+
+### Perguntas de refinamento
+
+| Elemento | Pergunta |
+|---|---|
+| **[1] Ambiente ou Contexto** | A instituição possui prazo formal para emissão dos diplomas após a colação de grau? |
+| **[2] Atores** | Maria conta com suporte técnico disponível durante o processo para resolver problemas de incompatibilidade? |
+| **[3] Objetivos** | Como Maria determina qual sistema — SIGA ou CSV — é a fonte correta quando os dados divergem? |
+| **[4] Planejamento** | Existe um procedimento documentado a seguir quando o CSV da secretaria não é compatível com o sistema? |
+| **[5] Ações** | O sistema oferece algum recurso de salvamento parcial ou aviso de expiração de sessão antes de perder os dados? |
+| **[6] Eventos** | Como Maria é informada sobre quais diplomas específicos falharam na emissão em lote? |
+| **[7] Avaliação** | Maria interpreta as falhas de emissão como erro nos dados cadastrados ou como problema do sistema? |
+| **[8] Avaliação** | Os formandos com diplomas não emitidos recebem alguma comunicação automática sobre a pendência? |
+
+---
+
+### Narrativa revisada
+
+### Atores: Maria Eduarda Santos (analista de emissão de diplomas) e Secretaria Acadêmica
+
+Na segunda-feira seguinte à colação de grau de dezembro, Maria Eduarda Santos, analista de emissão de diplomas da Universidade Privada Horizonte, precisa cadastrar e emitir os diplomas digitais dos 238 alunos que colaram grau na sexta-feira anterior. A instituição determina que os diplomas sejam emitidos em até 30 dias após a colação[1], e Maria prefere concluir o processo na primeira semana para evitar acúmulo com outras demandas do setor. O processo começa quando a secretaria acadêmica envia por e-mail um arquivo CSV exportado do sistema acadêmico da universidade (SIGA) com os dados dos formandos.
+
+Ao tentar importar o arquivo no sistema de emissão de diplomas, Maria recebe uma mensagem de erro informando que o formato do CSV não é compatível. O sistema acadêmico e o sistema de diplomas foram desenvolvidos por fornecedores diferentes e não compartilham o mesmo padrão de exportação. Maria sabe que poderia acionar o suporte técnico de TI, mas o SLA de atendimento é de até cinco dias úteis[2] — tempo que ela não tem. Ela abre o arquivo no Excel, renomeia manualmente as colunas para o padrão esperado e remove a formatação dos campos de CPF. Não há procedimento documentado para essa situação; Maria resolve por conta própria, como já fez antes[4].
+
+Com o arquivo corrigido, o sistema aceita os registros, mas Maria percebe que vários campos obrigatórios para emissão — como data de ingresso, turno e habilitação do curso — não estavam no CSV enviado pela secretaria. Para cada aluno, Maria abre o SIGA em outra aba do navegador, busca o cadastro pelo CPF e copia as informações para o sistema de diplomas. Quando os dados do SIGA diferem do CSV, ela adota o SIGA como fonte de verdade[3], por entender que o sistema acadêmico é alimentado diretamente pelos setores responsáveis. Ela repete essa sequência 238 vezes ao longo do dia.
+
+Durante o preenchimento, Maria nota que o aluno João Pedro Santos tem data de nascimento registrada no CSV como 1952. Ela sai da tela de cadastro para consultar o SIGA em outra aba, confirma que a data correta é 2002 e retorna para corrigir. Ao voltar, o sistema exibe uma mensagem de sessão expirada. O sistema não havia emitido nenhum aviso antes do encerramento automático e não salvou o progresso parcial[5]. Maria refaz os três últimos registros a partir de suas anotações no papel.
+
+Ao acionar a emissão dos diplomas ao final do dia, a tela permanece carregando por catorze minutos sem nenhuma indicação de progresso. Quando a tela atualiza, o sistema informa que 236 diplomas foram emitidos, sem identificar os dois registros com falha nem apresentar qualquer mensagem de erro[6]. Maria compara manualmente a lista dos 238 nomes com os registros emitidos no sistema e identifica os casos de Lucas Mendes e Rodrigo Carvalho. Sem mais informações disponíveis na interface, ela acredita que as falhas foram causadas por algum dado incorreto no cadastro[7] — mas não tem como confirmar.
+
+Para avisar os formandos, Maria tenta usar o botão "Notificar Alunos" do sistema, que exibe a mensagem de que o módulo de e-mail não está configurado. Ela abre o Outlook e começa a enviar os avisos individualmente, buscando o endereço de cada aluno no SIGA. Os 236 formandos com diploma emitido não recebem nenhuma comunicação automática do sistema enquanto aguardam[8]; os dois com falha na emissão — Lucas e Rodrigo — também ficam sem qualquer aviso sobre a pendência. Ao tentar notificar a aluna Fernanda Oliveira, o e-mail é devolvido por endereço inválido. Maria anota o caso num post-it para resolver no dia seguinte.
+
+Ao encerrar o expediente, Maria ainda não havia notificado 35 dos 236 formandos. Os diplomas de Lucas e Rodrigo permanecem sem emissão e sem explicação.
 
 ---
 
