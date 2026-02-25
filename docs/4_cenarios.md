@@ -120,3 +120,42 @@ Ana Carolina já enfrentou situações anteriores em que candidatos apresentaram
 Após receber a solicitação, Lucas Mendes busca sua Universidade e solicita o histórico afim de comprovar seus estudos, o que pode demorar até um semana de acordo com a própria instituição - isso deixa Lucas Mendes apreensivo de perder a vaga[2], afinal, ele acredita que essa validação se trata de um processo padrão[7] e decisivo[3]. Caso a Universidade demore mais que 4 dias, Lucas planeja ir presencialmente verificar a situação[4], para garantir que não perca o prazo e que tudo corre bem. Após receber o documento, Lucas Mendes envia-o à Ana Carolina Ferreira via e-mail[5], solicitando também confirmação de recebimento.
 
 Após receber o documento de Lucas Mendes (ou confirmação de validade da Instituição de Ensino), Ana Carolina Ferreira registra isso em sistema e prossegue com os devidos trâmites referente à contratação ou prosseguimento das fases de entrevista.
+---
+## Cenário 3 
+**Responsável:** João Paulo Paggi Zuanon Dias
+
+---
+
+### Narrativa: Visualização de diplomas e certificados e verificação de validade pelo estudante
+
+### Atores: Lucas Mendes (estudante)
+
+Lucas Mendes, recém-formado em Engenharia da Computação, precisa acessar seu diploma digital. Ele abre o notebook em casa, à noite, e acessa o portal da universidade onde se formou. No menu "Documentos Acadêmicos", encontra a opção "Diplomas e Certificados", mas ao clicar a página demora a carregar e em seguida exibe a mensagem de que o serviço está temporariamente indisponível. Lucas tenta pelo celular, pelo mesmo portal; o resultado é o mesmo. Ele não sabe se o diploma já foi emitido ou se ainda está em processamento, e não há indicação de quando o serviço voltará.
+
+No dia seguinte, no horário de almoço, Lucas tenta novamente. Desta vez a página abre e lista "Diploma de Bacharelado — Engenharia da Computação" com data de emissão. Ao clicar para visualizar, o sistema exibe o documento em PDF, mas não há nenhum selo, link ou código que indique como um terceiro pode verificar a autenticidade. Lucas não sabe se aquele PDF é considerado "válido" por empresas ou se precisa solicitar algo adicional à universidade — como uma via autenticada ou um link de verificação. Ele baixa o PDF.
+
+Ao revisar a mesma tela, Lucas vê que há outros itens na lista: certificado de conclusão de estágio e certificado de participação em evento acadêmico. Ele gostaria de anexar o certificado de estágio ao currículo em outra candidatura, mas não encontra na interface nenhuma informação sobre validade ou reconhecimento daquele certificado — apenas o documento para download. Lucas encerra a sessão sem ter certeza de que seus diplomas e certificados estão "válidos" no sentido que empregadores e instituições exigem, e sem saber como demonstrar essa validade de forma clara.
+
+---
+
+### Perguntas de refinamento
+
+| Elemento | Pergunta |
+|---|---|
+| **[1] Ambiente ou Contexto** | Em que momento e em qual dispositivo (celular, computador) o estudante costuma acessar diplomas e certificados? |
+| **[2] Atores** | O estudante age sozinho ou depende de suporte da instituição (secretaria, TI) para visualizar ou comprovar validade? |
+| **[3] Objetivos** | O estudante busca apenas ver o documento ou também obter uma comprovação de validade utilizável por terceiros (empregador, outra IES)? |
+| **[4] Planejamento** | O estudante sabe antecipadamente onde acessar (portal, e-mail, app) e o que fazer se o diploma não estiver disponível ou a página falhar? |
+| **[5] Ações** | Como o estudante visualiza o diploma (tela, download)? Há ação explícita para "verificar validade" (botão, link, código) ou isso não existe na interface? |
+| **[6] Eventos** | Há mensagens de erro ou manutenção que afetam o acesso? |
+| **[7] Avaliação** | Após usar o sistema, o estudante consegue concluir com segurança que seus diplomas/certificados estão válidos e que pode demonstrar isso a terceiros? |
+
+---
+
+### Narrativa revisada (com sinalização das questões)
+
+Lucas Mendes, recém-formado em Engenharia da Computação, precisa acessar seu diploma digital. Ele abre o notebook em casa[1], à noite, e acessa o portal da universidade onde se formou. No menu "Documentos Acadêmicos", encontra a opção "Diplomas e Certificados", mas ao clicar a página demora a carregar e em seguida exibe a mensagem de que o serviço está temporariamente indisponível[6]. Lucas tenta pelo celular, pelo mesmo portal; o resultado é o mesmo. Ele não sabe se o diploma já foi emitido ou se ainda está em processamento[6], e não há indicação de quando o serviço voltará.
+
+No dia seguinte, no horário de almoço, Lucas tenta novamente. Desta vez a página abre e lista "Diploma de Bacharelado — Engenharia da Computação" com data de emissão. Ao clicar para visualizar[5], o sistema exibe o documento em PDF, mas não há nenhum selo, link ou código que indique como um terceiro pode verificar a autenticidade[5]. Lucas não sabe se aquele PDF é considerado "válido" por empresas ou se precisa solicitar algo adicional à instituição[3][7]; ele age sozinho, sem contato prévio com secretaria ou TI[2]. Ele baixa o PDF.
+
+Ao revisar a mesma tela, Lucas vê que há outros itens na lista: certificado de conclusão de estágio e certificado de participação em evento acadêmico. Ele gostaria de anexar o certificado de estágio ao currículo em outra candidatura[3], mas não encontra na interface nenhuma informação sobre validade ou reconhecimento daquele certificado — apenas o documento para download[5][7]. Lucas encerra a sessão sem ter certeza de que seus diplomas e certificados estão "válidos" no sentido que empregadores e instituições exigem, e sem saber como demonstrar essa validade de forma clara[7].
