@@ -44,18 +44,18 @@ flowchart LR
 
 | Objetivos / Operações | Problemas e Recomendações |
 |---|---|
-| **0. Emitir diplomas digitais em lote** `1>2>3>4` <br> Input: lista de formandos homologados · Feedback: diplomas na blockchain e formandos notificados | Rec.: integrar SIGA ao sistema para eliminar a exportação manual |
-| **1. Importar dados dos formandos** `1>2` | |
+| **0. Emitir diplomas digitais em lote**  <br> Input: lista de formandos homologados · Feedback: diplomas na blockchain e formandos notificados | Rec.: integrar SIGA ao sistema para eliminar a exportação manual |
+| **1. Importar dados dos formandos**  | |
 | 1.1 Receber arquivo CSV da secretaria acadêmica | **Problema !** Processo manual por e-mail, sem rastreabilidade de versão ou data do arquivo |
 | 1.2 Importar CSV no sistema de diplomas | **Problema !** Formato do CSV do SIGA incompatível com o sistema — Maria corrige manualmente no Excel **· Rec.:** padronizar ou integrar o formato de exportação |
-| **2. Validar e corrigir dados** `1>2` | |
+| **2. Validar e corrigir dados**  | |
 | 2.1 Verificar inconsistências nos dados importados | **Problema !** Sem validação automática — Maria revisa 238 registros visualmente, um a um **· Rec.:** validar CPF, datas e campos críticos automaticamente na importação |
 | 2.2 Completar campos obrigatórios faltantes | **Problema !** Campos obrigatórios ausentes no CSV; Maria alterna entre SIGA e sistema para transcrever dados de cada formando **· Problema !** Sessão expira sem aviso, perdendo o trabalho em andamento **· Rec.:** incluir todos os campos na exportação do SIGA; implementar salvamento automático e aviso de sessão |
-| **3. Emitir diplomas** `1>2>3` | |
+| **3. Emitir diplomas**  | |
 | 3.1 Selecionar registros para emissão | |
 | 3.2 Confirmar emissão em lote | |
 | 3.3 Aguardar processamento e verificar resultado | **Problema !** Sem barra de progresso — Maria não sabe se o sistema está travado **· Problema !** Sistema informa apenas o total emitido, sem identificar falhas; Maria compara 238 nomes manualmente **· Rec.:** exibir progresso e gerar relatório de falhas com motivo por registro |
-| **4. Notificar formandos** `1/2` | |
+| **4. Notificar formandos**  | |
 | 4.1 Notificar via sistema de diplomas | **Problema !** Módulo de e-mail não configurado; sistema exibe erro sem orientação **· Rec.:** ativar notificação automática como etapa obrigatória do fluxo |
 | 4.2 Notificar manualmente pelo Outlook | **Problema !** Sistema não armazena e-mail dos formandos; Maria busca cada endereço no SIGA individualmente **· Problema !** Endereços desatualizados geram devoluções descobertas só após o envio **· Rec.:** armazenar e-mails no sistema e validar antes da emissão |
 
