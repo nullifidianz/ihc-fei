@@ -162,3 +162,196 @@ GOAL 0: Emitir diplomas digitais em lote após colação de grau
       OP. 4.B.2: criar e enviar e-mail no Outlook com o link do diploma
       OP. 4.B.3: repetir OP. 4.B.1–4.B.2 para cada um dos 238 formandos
 ```
+
+# Análise de Tarefas – Validação de Diploma
+
+## Cenário 2
+**Responsável:** Thales Clemente Pasquotto  
+
+---
+
+# 1. Análise Hierárquica de Tarefas (HTA)
+
+```mermaid
+flowchart TD
+
+A[0. Validar diploma do candidato]
+
+A --> B[1. Solicitar comprovação de formação]
+B --> B1[1.1 Identificar necessidade de validação]
+B --> B2[1.2 Enviar solicitação ao candidato]
+
+A --> C[2. Obter histórico da universidade]
+C --> C1[2.1 Solicitar histórico]
+C --> C2[2.2 Aguardar emissão]
+C --> C3[2.3 Ir presencialmente à universidade]
+
+A --> D[3. Enviar histórico à recrutadora]
+D --> D1[3.1 Anexar documento ao e-mail]
+D --> D2[3.2 Enviar e-mail]
+
+A --> E[4. Verificar validade do diploma]
+E --> E1[4.1 Receber documento]
+E --> E2[4.2 Analisar autenticidade]
+
+A --> F[5. Registrar validação no sistema]
+F --> F1[5.1 Registrar confirmação]
+F --> F2[5.2 Prosseguir com processo seletivo]
+```
+
+---
+
+## Decomposição Hierárquica
+
+| Nº | Objetivo / Operação |
+|---|---|
+| **0** | Validar diploma do candidato |
+| **1** | Solicitar comprovação de formação ao candidato |
+| **1.1** | Identificar necessidade de validação do diploma |
+| **1.2** | Enviar solicitação de histórico ou comprovação ao candidato |
+| **2** | Obter histórico acadêmico da universidade |
+| **2.1** | Solicitar histórico à universidade |
+| **2.2** | Aguardar emissão do documento |
+| **2.3** | (Opcional) Ir presencialmente à universidade para verificar solicitação |
+| **3** | Enviar histórico para a recrutadora |
+| **3.1** | Anexar histórico ao e-mail |
+| **3.2** | Enviar e-mail solicitando confirmação de recebimento |
+| **4** | Verificar validade do diploma |
+| **4.1** | Receber histórico ou confirmação institucional |
+| **4.2** | Analisar documento recebido |
+| **5** | Registrar validação no sistema da empresa |
+| **5.1** | Inserir confirmação de diploma no sistema |
+| **5.2** | Prosseguir com processo seletivo |
+
+---
+
+## Input, Feedback e Problemas
+
+**Input:**  
+- Currículo do candidato  
+- Histórico acadêmico emitido pela universidade
+
+**Feedback:**  
+- Documento validado e registrado no sistema interno da empresa
+
+**Problemas identificados:**
+- Demora na emissão do histórico pela universidade
+- Dependência de comunicação manual (e-mail ou telefone)
+
+**Recomendações:**
+- Integração automática com sistema de validação de diplomas
+- Plataforma digital para envio e validação de certificados
+
+---
+
+# 2. Modelo GOMS
+
+## GOAL 0
+Validar diploma de Lucas Mendes para continuidade do processo seletivo.
+
+---
+
+## GOAL 1
+Solicitar comprovação de formação ao candidato.
+
+### METHOD 1.A – Solicitação via e-mail
+(SEL. RULE: empresa utiliza comunicação direta com candidato)
+
+OP.1.A.1: abrir sistema de recrutamento  
+OP.1.A.2: localizar candidato Lucas Mendes  
+OP.1.A.3: redigir e-mail solicitando histórico  
+OP.1.A.4: enviar e-mail
+
+---
+
+## GOAL 2
+Obter histórico acadêmico.
+
+### METHOD 2.A – Solicitação online
+(SEL. RULE: universidade possui sistema digital)
+
+OP.2.A.1: acessar portal da universidade  
+OP.2.A.2: localizar opção de emissão de histórico  
+OP.2.A.3: solicitar documento
+
+### METHOD 2.B – Solicitação presencial
+(SEL. RULE: demora superior ao prazo esperado)
+
+OP.2.B.1: deslocar-se até a universidade  
+OP.2.B.2: solicitar histórico na secretaria  
+OP.2.B.3: aguardar emissão do documento
+
+---
+
+## GOAL 3
+Enviar histórico para a recrutadora.
+
+### METHOD 3.A – Envio por e-mail
+
+OP.3.A.1: abrir cliente de e-mail  
+OP.3.A.2: anexar histórico  
+OP.3.A.3: escrever mensagem solicitando confirmação  
+OP.3.A.4: enviar e-mail
+
+---
+
+## GOAL 4
+Verificar validade do diploma.
+
+### METHOD 4.A – Análise do documento recebido
+
+OP.4.A.1: abrir e-mail do candidato  
+OP.4.A.2: baixar histórico  
+OP.4.A.3: analisar instituição e curso  
+OP.4.A.4: confirmar autenticidade
+
+---
+
+## GOAL 5
+Registrar validação no sistema.
+
+### METHOD 5.A – Registro interno
+
+OP.5.A.1: acessar sistema de recrutamento  
+OP.5.A.2: atualizar status da documentação  
+OP.5.A.3: prosseguir com processo seletivo
+
+---
+
+# 3. Modelo CTT (ConcurTaskTrees)
+
+```mermaid
+flowchart TD
+
+A[Solicitar comprovacao]
+B[Solicitar historico]
+C[Aguardar emissao]
+D[Enviar historico]
+E[Verificar autenticidade]
+F[Registrar validacao]
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+
+C -. paralelo .-> G[Monitorar prazo da vaga]
+```
+
+---
+
+## Estrutura de Tarefas
+Validar diploma do candidato
+|
++-- Solicitar comprovação de formação (Usuário - Ana)
+>>
++-- Solicitar histórico à universidade (Usuário - Lucas)
+||
++-- Aguardar emissão do documento (Sistema/Universidade)
+>>
++-- Enviar histórico à recrutadora (Interativa)
+>>
++-- Verificar autenticidade do diploma (Usuário - Ana)
+>>
++-- Registrar validação no sistema (Interativa)
