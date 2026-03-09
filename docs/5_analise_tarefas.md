@@ -16,20 +16,20 @@ flowchart LR
 
     G0["0. Emitir diplomas digitais em lote\nplano: 1 ➜ 2 ➜ 3 ➜ 4"]:::objetivo
 
-    G1["1. Importar dados dos formandos\nplano: 1 ➜ 2"]:::objetivo
-    G2["2. Validar e corrigir dados\nplano: 1 ➜ 2"]:::objetivo
+    G1["1. Importar dados dos formandos plano: 1 ➜ 2"]:::objetivo
+    G2["2. Validar e corrigir dados plano: 1 ➜ 2"]:::objetivo
     G3["3. Emitir diplomas\nplano: 1 ➜ 2 ➜ 3"]:::objetivo
-    G4["4. Notificar formandos\nplano: 1 / 2  seleção"]:::objetivo
+    G4["4. Notificar formandos plano: 1 / 2  seleção"]:::objetivo
 
-    G11["1.1 Receber CSV\nda secretaria acadêmica"]:::operacao
-    G12["1.2 Importar CSV\nno sistema de diplomas"]:::operacao
-    G21["2.1 Verificar\ninconsistências"]:::operacao
-    G22["2.2 Completar\ncampos faltantes"]:::operacao
-    G31["3.1 Selecionar\nregistros"]:::operacao
-    G32["3.2 Confirmar\nemissão em lote"]:::operacao
-    G33["3.3 Aguardar processamento\ne verificar resultado"]:::operacao
-    G41["4.1 Notificar\npelo sistema"]:::operacao
-    G42["4.2 Notificar\npelo Outlook"]:::operacao
+    G11["1.1 Receber CSV da secretaria acadêmica"]:::operacao
+    G12["1.2 Importar CSV no sistema de diplomas"]:::operacao
+    G21["2.1 Verificar inconsistências"]:::operacao
+    G22["2.2 Completar campos faltantes"]:::operacao
+    G31["3.1 Selecionar registros"]:::operacao
+    G32["3.2 Confirmar emissão em lote"]:::operacao
+    G33["3.3 Aguardar processamento e verificar resultado"]:::operacao
+    G41["4.1 Notificar pelo sistema"]:::operacao
+    G42["4.2 Notificar pelo Outlook"]:::operacao
 
     G0 --> G1 & G2 & G3 & G4
     G1 --> G11 & G12
