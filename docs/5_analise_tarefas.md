@@ -29,7 +29,7 @@ flowchart LR
     G32["3.2 Confirmar emissão em lote"]:::operacao
     G33["3.3 Aguardar processamento e verificar resultado"]:::operacao
     G41["4.1 Notificar pelo sistema"]:::operacao
-    G42["4.2 Notificar pelo Outlook"]:::operacao
+    G42["4.2 Notificar pelo Email"]:::operacao
 
     G0 --> G1 & G2 & G3 & G4
     G1 --> G11 & G12
