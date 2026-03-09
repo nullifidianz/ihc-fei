@@ -57,7 +57,7 @@ flowchart LR
 | 3.3 Aguardar processamento e verificar resultado | **Problema !** Sem barra de progresso — Maria não sabe se o sistema está travado **· Problema !** Sistema informa apenas o total emitido, sem identificar falhas; Maria compara 238 nomes manualmente **· Rec.:** exibir progresso e gerar relatório de falhas com motivo por registro |
 | **4. Notificar formandos**  | |
 | 4.1 Notificar via sistema de diplomas | **Problema !** Módulo de e-mail não configurado; sistema exibe erro sem orientação **· Rec.:** ativar notificação automática como etapa obrigatória do fluxo |
-| 4.2 Notificar manualmente pelo Outlook | **Problema !** Sistema não armazena e-mail dos formandos; Maria busca cada endereço no SIGA individualmente **· Problema !** Endereços desatualizados geram devoluções descobertas só após o envio **· Rec.:** armazenar e-mails no sistema e validar antes da emissão |
+| 4.2 Notificar manualmente pelo Email | **Problema !** Sistema não armazena e-mail dos formandos; Maria busca cada endereço no SIGA individualmente **· Problema !** Endereços desatualizados geram devoluções descobertas só após o envio **· Rec.:** armazenar e-mails no sistema e validar antes da emissão |
 
 ---
 
