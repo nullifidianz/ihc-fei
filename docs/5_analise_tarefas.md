@@ -14,12 +14,12 @@ flowchart LR
     classDef objetivo fill:#dbeafe,stroke:#2563eb,stroke-width:2px,font-weight:bold,color:#000000
     classDef operacao fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
 
-    G0["0. Emitir diplomas digitais em lote\nplano: 1 ➜ 2 ➜ 3 ➜ 4"]:::objetivo
+    G0["0. Emitir diplomas digitais em lote plano"]:::objetivo
 
-    G1["1. Importar dados dos formandos plano: 1 ➜ 2"]:::objetivo
-    G2["2. Validar e corrigir dados plano: 1 ➜ 2"]:::objetivo
-    G3["3. Emitir diplomas\nplano: 1 ➜ 2 ➜ 3"]:::objetivo
-    G4["4. Notificar formandos plano: 1 / 2  seleção"]:::objetivo
+    G1["1. Importar dados dos formandos"]:::objetivo
+    G2["2. Validar e corrigir dados"]:::objetivo
+    G3["3. Emitir diplomas"]:::objetivo
+    G4["4. Notificar formandos"]:::objetivo
 
     G11["1.1 Receber CSV da secretaria acadêmica"]:::operacao
     G12["1.2 Importar CSV no sistema de diplomas"]:::operacao
