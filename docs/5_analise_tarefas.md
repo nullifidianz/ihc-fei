@@ -3,7 +3,9 @@
 ## Análise Hierárquica de Tarefas (HTA)
 
 **Persona:** Maria Eduarda Santos — Analista de Emissão de Diplomas
+
 **Responsável:** Leandro de Brito Alencar
+
 **Tarefa principal:** Emitir diplomas digitais em lote após colação de grau
 
 ---
