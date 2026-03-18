@@ -238,3 +238,140 @@ flowchart LR
 | 2.1 []>> 2.2                 | `[]>>`        | Inconsistências identificadas habilitam o preenchimento           |
 | 3.1 >> 3.2 []>> 3.3 []>> 3.4 | `>>` / `[]>>` | Seleção habilita confirmação; confirmação dispara o processamento |
 | 4.A \|[]\| 4.B               | `\|[]\|`      | Escolha: módulo do sistema (indisponível) ou Outlook manual       |
+
+
+
+# Análise de Tarefas - Validação de Diploma
+
+## Análise Hierárquica de Tarefas (HTA)
+
+**Persona:** Ana Carolina Ferreira - Analista Sênior de Recrutamento e Seleção 
+**Responsável:** Thales Clemente Pasquotto 
+
+**Tarefa principal:** Validar autenticidade de um diploma digital via hash  
+
+---
+
+```mermaid
+flowchart LR
+    classDef objetivo fill:#dbeafe,stroke:#2563eb,stroke-width:2px,font-weight:bold,color:#000000
+    classDef operacao fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
+
+    G0["0. Validar diploma digital plano: 1 > 2 > 3 > 4"]:::objetivo
+
+    G1["1. Obter hash do diploma"]:::objetivo
+    G2["2. Acessar aplicação"]:::objetivo
+    G3["3. Informar hash"]:::objetivo
+    G4["4. Visualizar resultado"]:::objetivo
+
+    G11["1.1 Receber hash do candidato"]:::operacao
+    G21["2.1 Abrir navegador"]:::operacao
+    G22["2.2 Acessar sistema de validação"]:::operacao
+    G31["3.1 Inserir hash no campo"]:::operacao
+    G32["3.2 Submeter consulta"]:::operacao
+    G41["4.1 Visualizar resposta do sistema"]:::operacao
+
+    G0 --> G1 & G2 & G3 & G4
+    G1 --> G11
+    G2 --> G21 & G22
+    G3 --> G31 & G32
+    G4 --> G41
+```
+
+---
+
+### Tabela de Objetivos/Operações, Problemas e Recomendações
+
+| Objetivos / Operações | Problemas e Recomendações |
+|----------------------|--------------------------|
+| **0. Validar diploma digital** (plano: 1 > 2 > 3 > 4) | Input: hash do diploma · Feedback: diploma válido ou não encontrado |
+| **1. Obter hash do diploma** | |
+| 1.1 Receber hash do candidato | Problema: usuário pode não saber onde encontrar a hash · Recomendação: incluir QR Code |
+| **2. Acessar aplicação** | |
+| 2.1 Abrir navegador | |
+| 2.2 Acessar sistema | Problema: URL desconhecida · Recomendação: link oficial |
+| **3. Informar hash** | |
+| 3.1 Inserir hash | Problema: erro de digitação · Recomendação: copiar/colar ou QR |
+| 3.2 Submeter consulta | |
+| **4. Visualizar resultado** | |
+| 4.1 Visualizar resposta | Problema: mensagem vaga · Recomendação: detalhar erro |
+
+---
+
+## Modelo GOMS
+
+**Persona:** João Silva — Recrutador  
+**Tarefa principal:** Validar autenticidade de diploma via hash  
+
+```
+GOAL 0: Validar autenticidade de um diploma digital
+
+  GOAL 1: Obter hash do diploma
+    METHOD 1.A: Receber hash do candidato
+      OP. 1.A.1: solicitar hash
+      OP. 1.A.2: copiar hash
+
+  GOAL 2: Acessar sistema
+    METHOD 2.A: Acesso via navegador
+      OP. 2.A.1: abrir navegador
+      OP. 2.A.2: acessar sistema
+
+  GOAL 3: Informar hash
+    METHOD 3.A: Inserção manual
+      OP. 3.A.1: clicar no campo
+      OP. 3.A.2: colar/digitar hash
+      OP. 3.A.3: clicar em validar
+
+  GOAL 4: Interpretar resultado
+
+    METHOD 4.A: Diploma encontrado
+      OP. 4.A.1: visualizar diploma
+      OP. 4.A.2: confirmar autenticidade
+
+    METHOD 4.B: Diploma não encontrado
+      OP. 4.B.1: ler mensagem
+      OP. 4.B.2: solicitar nova hash
+```
+
+---
+
+## Modelo CTT (ConcurTaskTrees)
+
+```mermaid
+flowchart LR
+    classDef abstract fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#000000
+    classDef user fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#000000
+    classDef system fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#000000
+    classDef interact fill:#fae8ff,stroke:#9333ea,stroke-width:2px,color:#000000
+
+    G0["0. Validar diploma"]:::abstract
+    G0 --> G1 & G2 & G3 & G4
+
+    G1["1. Obter hash"]:::abstract
+    G11["Receber hash"]:::user
+
+    G2["2. Acessar sistema"]:::abstract
+    G21["Abrir navegador"]:::user
+    G22["Acessar sistema"]:::interact
+
+    G3["3. Informar hash"]:::abstract
+    G31["Inserir hash"]:::interact
+    G32["Enviar"]:::interact
+
+    G4["4. Resultado"]:::abstract
+    G41["Processar"]:::system
+    G42["Exibir"]:::interact
+
+    G1 --> G11
+    G2 --> G21 & G22
+    G3 --> G31 & G32
+    G4 --> G41 & G42
+```
+
+---
+
+### Operadores
+
+- 1 >> 2 >> 3 >> 4 (sequencial)  
+- 1.1 []>> 3.1 (hash alimenta entrada)  
+- 3.2 []>> 4.1 (envio dispara processamento)  
