@@ -22,11 +22,11 @@
 
 ### Sobre conhecimento do domínio
 
-| Categoria            | Dados a coletar                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------ |
-| Domínio acadêmico    | Familiaridade com o processo de emissão de diplomas, prazos legais e regulamentação do MEC |
-| Domínio de validação | Conhecimento sobre fraudes de diplomas e processos de verificação de autenticidade         |
-| Blockchain           | Familiaridade com a tecnologia; nível de confiança em documentos registrados em blockchain |
+| Categoria            | Dados a coletar                                                                                            |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Domínio acadêmico    | Familiaridade com o processo de emissão de diplomas, prazos legais e regulamentação do MEC                |
+| Domínio de validação | Conhecimento sobre fraudes de diplomas e processos de verificação de autenticidade                        |
+| Blockchain           | Familiaridade com a tecnologia; nível de confiança em documentos registrados em blockchain                |
 
 ### Sobre suas tarefas
 
@@ -130,5 +130,89 @@ Na prática, os pesquisadores irão:
 - "Vi que você [ação observada]. Pode me explicar por que fez assim?"
 - "Isso que aconteceu é comum? Acontece sempre dessa forma?"
 - "Se você pudesse mudar uma coisa nesse processo, o que seria?"
+
+---
+
+### Questionário
+
+**Responsável:** João Paulo Paggi Zuanon Dias
+
+**Motivo da escolha do método:** O questionário se enquadra nos métodos de investigação, permitindo que o avaliador tenha acesso, interprete e analise concepções, opiniões, expectativas e comportamentos do usuário relacionados com sistemas interativos. Dessa forma, é possível identificar e encarar os problemas reais que os usuários enfrentaram durante sua experiência.
+
+**Escopo do instrumento:** O escopo do questionário está diretamente ligado às perguntas pré-definidas de acordo com o objetivo da avaliação. Alguns desses objetivos podem ser:
+
+- Apropriação de tecnologia pelos usuários, incluindo o sistema computacional a ser avaliado, mas não se limitando a ele
+- Ideias e alternativas de design
+- Conformidade com um padrão
+- Problemas na interação e na interface
+
+Dentro do processo inteiro da avaliação, o questionário aparece durante dois momentos: o **Pré-teste**, aplicado antes da realização das tarefas, e o **Pós-teste**, aplicado após a conclusão das tarefas.
+
+**Como aplicar o instrumento:**
+
+Antes da aplicação de qualquer instrumento, é necessário realizar a preparação e o planejamento para compreender melhor os seguintes aspectos:
+
+- Os objetivos e questões específicas de investigação
+- O escopo da avaliação (quais partes da interface, caminhos de interação e tarefas devem fazer parte da avaliação)
+- Os métodos a serem utilizados
+- Os perfis e o número de participantes
+
+Após esse planejamento, a aplicação do questionário em uma sessão segue a seguinte forma:
+
+1. O participante recebe e assina o Termo de Consentimento
+2. É entregue o formulário pré-teste antes do início das tarefas
+3. O participante realiza as tarefas propostas
+4. Ao final, é realizado o questionário pós-teste para coletar impressões sobre a experiência e esclarecer dúvidas
+
+**Instrumento:**
+
+Link para o exemplo: https://docs.google.com/forms/d/e/1FAIpQLSfmCGVXvC-4NooTMWYRLZWgBMw-_gfbm1fjFEUg5QT-PkBmYQ/viewform
+
+Os materiais que compõem o instrumento são:
+
+| Material                    | Descrição                                                                          |
+| --------------------------- | ---------------------------------------------------------------------------------- |
+| **Questionário pré-teste**  | Levanta o perfil e as expectativas do participante; aplicado antes das tarefas     |
+| **Questionário pós-teste**  | Coleta a experiência vivenciada pelo participante; aplicado após as tarefas        |
+
+Os dados coletados pelo questionário podem ser de diferentes tipos:
+
+| Tipo de Dado    | Descrição                          | Exemplo                               |
+| --------------- | ---------------------------------- | ------------------------------------- |
+| **Nominal**     | Rótulos ou categorias              | Origem étnica, perfil do usuário      |
+| **Ordinal**     | Dados com relação de ordem         | Lista de preferências de sites        |
+| **Qualitativo** | Não numérico                       | Opiniões, sugestões, críticas         |
+| **Subjetivo**   | Expresso pelo participante         | Preferências, expectativas            |
+
+**Como analisar o instrumento:**
+
+A análise ocorre em três etapas:
+
+*1. Interpretação*
+
+- O material registrado é analisado para atribuir significado aos dados coletados
+- A análise deve ser orientada pelo método de avaliação utilizado e pelo planejamento da avaliação
+
+*2. Consolidação (Análise Intersujeito)*
+
+- Busca recorrências nas respostas de todos os participantes
+- Distingue características representativas do grupo das específicas de cada participante
+- Busca responder ou justificar por que alguma questão de investigação não foi respondida
+
+> A generalização dos resultados exige muito cuidado, pois é fortemente influenciada pelo ambiente de avaliação e pelas características individuais dos participantes.
+
+*3. Relato dos Resultados*
+
+Os resultados indicam tendências de problemas, não certezas absolutas. O relato deve conter:
+
+| Item                              | Descrição                                                         |
+| --------------------------------- | ----------------------------------------------------------------- |
+| Objetivos e escopo da avaliação   | O que foi avaliado e com qual finalidade                          |
+| Método empregado                  | Como a coleta foi conduzida                                       |
+| Perfil dos participantes          | Características do grupo avaliado                                 |
+| Sumário dos dados                 | Tabelas e gráficos com os dados coletados                         |
+| Interpretação e análise dos dados | Significado atribuído aos dados                                   |
+| Lista dos problemas encontrados   | Problemas identificados na interação e na interface               |
+| Planejamento para o reprojeto     | Próximos passos para melhoria do sistema                          |
 
 ---
