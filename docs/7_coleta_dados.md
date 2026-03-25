@@ -216,3 +216,187 @@ Os resultados indicam tendências de problemas, não certezas absolutas. O relat
 | Planejamento para o reprojeto     | Próximos passos para melhoria do sistema                          |
 
 ---
+
+### Classificação de Cartões (Card Sorting)
+
+**Responsável:** Thales Clemente Pasquotto
+
+---
+
+### Objetivo
+
+A técnica de **Classificação de Cartões** será utilizada para compreender como os usuários organizam mentalmente as informações relacionadas ao processo de **validação de diplomas**.
+
+O foco é apoiar a definição da **arquitetura da informação** do sistema, especialmente:
+
+- Estrutura de menus
+- Organização de funcionalidades
+- Agrupamento de conteúdos
+- Terminologia utilizada
+
+Essa técnica permite identificar como os usuários categorizam conceitos, o que é essencial para projetar interfaces mais intuitivas.
+
+---
+
+### Justificativa da Escolha
+
+De acordo com Barbosa e Silva (2010), a classificação de cartões:
+
+- Ajuda a entender como os usuários pensam em categorias
+- É útil para estruturar sistemas com grande volume de informação
+- Reduz problemas de navegação e usabilidade
+
+No contexto do sistema de validação de diplomas, há diversos elementos que precisam ser organizados, como:
+
+- Emissão de diploma
+- Consulta de autenticidade
+- Upload de documentos
+- Histórico de validações
+
+Essa técnica ajuda a alinhar a estrutura do sistema com o modelo mental dos usuários.
+
+---
+
+### Participantes
+
+Serão convidados entre **5 a 10 participantes**, representando diferentes perfis:
+
+| Perfil                         | Justificativa                                      |
+|--------------------------------|---------------------------------------------------|
+| Analistas acadêmicos           | Utilizam o sistema diariamente                    |
+| Estudantes / egressos          | Consultam e compartilham diplomas                 |
+| Recrutadores (RH)              | Validam diplomas em processos seletivos           |
+| Secretários acadêmicos         | Interagem com dados institucionais                |
+
+---
+
+### Como Aplicar
+
+#### Etapas
+
+1. **Definir o objetivo da sessão**
+   - Organizar funcionalidades e conteúdos do sistema
+
+2. **Selecionar os itens (cartões)**  
+   Cada cartão representará uma funcionalidade ou informação do sistema:
+
+   Exemplos:
+   - "Emitir diploma"
+   - "Validar diploma"
+   - "Consultar hash"
+   - "Enviar documento"
+   - "Histórico de validações"
+   - "Assinatura digital"
+   - "Dados do aluno"
+   - "Dados da instituição"
+
+3. **Preparar o material**
+   - Cartões físicos (papel) ou ferramenta digital (ex.: Miro, OptimalSort)
+
+4. **Apresentar a atividade**
+   - Explicar que não há respostas certas ou erradas
+   - Solicitar que agrupem os cartões por similaridade
+
+5. **Execução**
+   - Participantes organizam os cartões em grupos
+   - Nomeiam cada grupo criado
+
+6. **Registro dos dados**
+   - Fotografar ou salvar os agrupamentos
+   - Registrar nomes das categorias
+
+7. **Duração**
+   - Aproximadamente 30 a 60 minutos por sessão
+
+---
+
+### Instrumento
+
+#### Conjunto de Cartões
+
+| ID | Conteúdo do Cartão              |
+|----|--------------------------------|
+| C1 | Emitir diploma                 |
+| C2 | Validar diploma               |
+| C3 | Consultar autenticidade       |
+| C4 | Upload de documentos          |
+| C5 | Assinatura digital            |
+| C6 | Histórico de validações       |
+| C7 | Dados do aluno                |
+| C8 | Dados da instituição          |
+| C9 | Status da validação           |
+
+---
+
+#### Registro da Sessão
+
+| Campo            | Descrição                          |
+|------------------|------------------------------------|
+| Participante     | Código anônimo (ex.: P01)          |
+| Data             |                                    |
+| Tipo de sessão   | Individual / Grupo                 |
+| Duração          |                                    |
+
+---
+
+#### Resultado da Classificação
+
+| Grupo criado pelo usuário | Cartões incluídos | Nome dado pelo usuário |
+|---------------------------|------------------|------------------------|
+| Grupo 1                   |                  |                        |
+| Grupo 2                   |                  |                        |
+| Grupo 3                   |                  |                        |
+
+---
+
+### Análise dos Dados
+
+A análise será feita em três etapas:
+
+#### 1. Consolidação
+
+- Identificar padrões de agrupamento entre participantes
+- Verificar quais cartões aparecem juntos com frequência
+
+#### 2. Padronização
+
+- Criar categorias consolidadas com base nos agrupamentos mais comuns
+
+#### 3. Aplicação no projeto
+
+- Definir estrutura de menus
+- Melhorar nomenclatura de funcionalidades
+- Ajustar navegação do sistema
+
+---
+
+### Vantagens da Técnica
+
+- Fácil aplicação
+- Baixo custo
+- Foco no modelo mental do usuário
+- Resultados diretos para arquitetura da informação
+
+---
+
+### Aspectos Éticos
+
+Serão adotadas as seguintes práticas:
+
+- Consentimento livre e esclarecido
+- Anonimato dos participantes
+- Uso dos dados apenas para fins acadêmicos
+- Liberdade para desistir a qualquer momento
+
+---
+
+### Resultado Esperado
+
+Ao final da aplicação, espera-se obter:
+
+- Uma estrutura de informação mais intuitiva
+- Melhor organização das funcionalidades
+- Redução de erros de navegação
+- Melhor experiência do usuário no sistema
+
+---
