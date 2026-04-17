@@ -8,6 +8,22 @@
 
 ---
 
+### Cenário de Interação — Validação de Diplomas
+**Persona:** Ana Carolina Ferreira (Recrutadora/Empresa Verificadora), Lucas Mendes (Estudante/Recém-Formado)
+**Responsável:** Thales Clemente Pasquotto
+
+**Atores:** Ana Carolina Ferreira (Recrutadora/Empresa Verificadora)
+
+Ana Carolina Ferreira atua como analista administrativa responsável pela validação de diplomas em uma instituição/empresa. Em um determinado momento, ela recebe no sistema uma nova solicitação feita por uma recrutadora, que deseja validar o diploma de graduação do Lucas Mendes para utilizá-lo em processos profissionais. Lucas providenciou o diploma em formato PDF e informou a hash de verificação do documento, enviando tudo para análise.
+
+Ao receber a solicitação, Ana Carolina acessa os dados submetidos e inicia o processo de validação. Primeiro, ela verifica a integridade do arquivo por meio da hash fornecida, garantindo que o documento não foi adulterado. Em seguida, consulta a base de dados da instituição de ensino responsável pela emissão do diploma para confirmar sua autenticidade. Após isso, compara as informações preenchidas por Lucas, como nome completo, curso e data de conclusão, com os dados presentes no documento enviado.
+
+Caso encontre alguma inconsistência, como divergência na data de conclusão ou erro no nome, Ana Carolina entra em contato com Lucas, solicitando a correção das informações ou o reenvio do documento adequado. Lucas, então, revisa os dados e submete novamente suas informações.
+
+Com todas as informações corretas e validadas, Ana Carolina finaliza o processo aprovando o diploma. Após isso, Lucas está apto a seguir no processo seletivo do qual ele faz parte.
+
+---
+
 ### Cenário de Interação — Emissão de Diplomas em Lote
 **Persona:** Maria Eduarda Santos (Analista de Emissão de Diplomas)
 **Responsável:** Leandro de Brito Alencar
@@ -26,11 +42,24 @@ Para os 2 registros pendentes, **Maria acessa a fila de pendências, corrige os 
 
 ---
 
-*(Cenário 2 — Thales | Cenário 3 — João Paulo)*
+*(Cenário 3 — João Paulo)*
 
 ---
 
 ## 2. Design Centrado na Comunicação
+
+### Nome do Cenário: Validação de Diploma Individual  
+**Persona:** Ana Carolina Ferreira | **Responsável:** Thales Clemente Pasquotto  
+
+| Tópico > Subtópico | Falas e Signos |
+|:---|:---|
+| receber solicitação | D: Nova solicitação de validação de diploma recebida para o candidato Lucas Mendes. Deseja iniciar a análise? |
+| | U: Sim, quero verificar a autenticidade do diploma enviado pela hash. |
+| | D: Hash verificada com sucesso. O documento apresenta indícios de alteração. |
+| | U: Solicitar documento correto ao candidato. |
+| reenvio de dados | U: Vou realizar nova validação. |
+| aprovação | D: Hash verificada com sucesso. O documento não apresenta indícios de alteração. |
+| status final | U: Candidato aprovado. |
 
 ### Nome do Cenário: Emissão em Lote e Validação de Dados
 **Persona:** Maria Eduarda Santos | **Responsável:** Leandro de Brito Alencar
@@ -53,11 +82,39 @@ Para os 2 registros pendentes, **Maria acessa a fila de pendências, corrige os 
 | | U: Corrigi os dados. Pode emitir e notificar. |
 | | D: Diplomas dos 2 formandos emitidos e notificações enviadas. O processo de emissão desta turma está concluído: 238 diplomas emitidos, 238 formandos notificados. |
 
-*(Tabela 2 — Thales | Tabela 3 — João Paulo)*
+*(Tabela 3 — João Paulo)*
 
 ---
 
 ## 3. Mapa de Objetivos
+
+### Ana Carolina Ferreira — Validação de Diploma por Hash
+**Responsável:** Thales Clemente Pasquotto
+
+```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 60, 'rankSpacing': 80}, 'themeVariables': {'fontSize': '16px'}}}%%
+flowchart LR
+    classDef objetivo fill:#dbeafe,stroke:#2563eb,stroke-width:2px,font-weight:bold,color:#000000
+    classDef operacao fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
+
+    G0["0. Validar autenticidade\ndo diploma"]:::objetivo
+    G0 --> G1 & G2 & G3
+
+    G1["1. Obter hash\ndo diploma"]:::objetivo
+    G2["2. Consultar diploma\nna blockchain"]:::objetivo
+    G3["3. Confirmar\nvalidação"]:::objetivo
+
+    G1 --> G11["1.1 Receber hash\ndo candidato"]:::operacao
+    G1 --> G12["1.2 Conferir formato\nda hash"]:::operacao
+
+    G2 --> G21["2.1 Inserir hash\nno sistema"]:::operacao
+    G2 --> G22["2.2 Buscar registro\nna blockchain"]:::operacao
+    G2 --> G23["2.3 Verificar integridade\ndo documento"]:::operacao
+
+    G3 --> G31["3.1 Analisar resultado\nda busca"]:::operacao
+    G3 --> G32["3.2 Confirmar autenticidade\ndo diploma"]:::operacao
+    G3 --> G33["3.3 Validar candidato\npara processo seletivo"]:::operacao
+```
 
 ### Maria Eduarda Santos — Analista de Emissão de Diplomas
 **Responsável:** Leandro de Brito Alencar
@@ -86,7 +143,7 @@ flowchart LR
     G4 --> G41["4.1 Notificar\nformandos"]:::operacao
 ```
 
-*(Mapa 2 — Thales | Mapa 3 — João Paulo | Diagrama consolidado a incluir após os três)*
+*Mapa 3 — João Paulo | Diagrama consolidado a incluir após os três)*
 
 ---
 
@@ -94,6 +151,52 @@ flowchart LR
 
 > **Nota:** tabelas de signo, conteúdo/restrição e prevenção/recuperação unificadas em uma única tabela por grupo.
 > **Legenda de prevenção/recuperação:** PP = Prevenção Passiva · PA = Prevenção Ativa · RA = Recuperação Apoiada · CE = Captura de Erro
+
+> **Nota:** tabelas de signo, conteúdo/restrição e prevenção/recuperação unificadas em uma única tabela por grupo.  
+> **Legenda de prevenção/recuperação:** PP = Prevenção Passiva · PA = Prevenção Ativa · RA = Recuperação Apoiada · CE = Captura de Erro  
+
+### Ana Carolina Ferreira — Validação de Diploma por Hash  
+**Responsável:** Thales Clemente Pasquotto  
+
+---
+
+**HS — Hash do Diploma**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| Hash do diploma | Domínio | Texto hexadecimal (256 bits) | Não nulo; deve seguir padrão hexadecimal válido; tamanho fixo | — | PP: instrução de formato esperado · PA: valida caracteres hexadecimais (0-9, a-f) | RA: alerta de hash inválida com indicação do erro · CE: "Verifique a hash informada e tente novamente" |
+| Formato da hash | Aplicação | Texto | Deve conter apenas caracteres hexadecimais; sem espaços | — | PA: bloqueia caracteres inválidos durante digitação | RA: mensagem destacando caracteres inválidos |
+
+---
+
+**CB — Consulta na Blockchain**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| Entrada de hash para busca | Aplicação | Texto | Deve corresponder a uma hash válida previamente registrada | — | PP: campo obrigatório (*) | RA: alerta se nenhum registro for encontrado |
+| Registro do diploma | Aplicação | Estrutura de dados | Deve existir na blockchain para validação positiva | — | PP: feedback visual de busca em andamento | RA: mensagem "Diploma não encontrado na base" |
+| Status da consulta | Aplicação | Enumeração (Encontrado / Não encontrado / Erro) | Gerado automaticamente | Não encontrado | PP: indicador de processamento | RA: mensagem clara do resultado da busca · CE: "Erro na consulta. Tente novamente" |
+
+---
+
+**VD — Validação do Diploma**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| Integridade do diploma | Aplicação | Booleano (Íntegro / Inválido) | Baseado na correspondência exata da hash | — | PA: validação automática da hash com o registro | RA: indicação de possível adulteração do documento |
+| Autenticidade do diploma | Aplicação | Booleano (Autêntico / Não autêntico) | Depende da existência do registro na blockchain | — | PP: só permite validação se registro existir | RA: mensagem de diploma não autenticado |
+| Resultado da validação | Aplicação | Enumeração (Válido / Inválido) | Gerado automaticamente após análise | Inválido | PP: resumo do resultado ao final da consulta | RA: orientação de reprovação do candidato em caso inválido |
+
+---
+
+**RS — Resultado para Processo Seletivo**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| Status do candidato | Domínio | Enumeração (Apto / Não apto) | Baseado no resultado da validação | Não apto | PP: regra clara de aprovação baseada na autenticidade | RA: indicação de reprovação caso diploma inválido |
+| Decisão da recrutadora | Domínio | Ação | Deve seguir o resultado da validação | — | PP: alinhamento com política de validação | RA: revisão manual em caso de dúvida |
+
+---
 
 ### Maria Eduarda Santos — Analista de Emissão de Diplomas
 **Responsável:** Leandro de Brito Alencar
