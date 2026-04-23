@@ -42,7 +42,17 @@ Para os 2 registros pendentes, **Maria acessa a fila de pendências, corrige os 
 
 ---
 
-*(Cenário 3 — João Paulo)*
+### Cenário de Interação — Visualização de Diplomas e Certificados com Comprovação de Validade
+**Persona:** Lucas Mendes (Estudante/Recém-Formado)
+**Responsável:** João Paulo Paggi Zuanon Dias
+
+**Atores:** Lucas Mendes (estudante)
+
+Lucas Mendes, recém-formado em Engenharia da Computação, precisa acessar seu diploma digital para utilizá-lo em processos seletivos. Ele abre o notebook em casa, à noite, e acessa o portal da universidade onde se formou. No menu "Documentos Acadêmicos", encontra a opção "Diplomas e Certificados". **Ao entrar na área, o sistema exibe o status atual de cada documento e, quando há indisponibilidade temporária, apresenta uma mensagem clara de manutenção com previsão de retorno e orientação para tentar novamente.** Lucas também consegue acessar a mesma área pelo celular, com a interface adaptada ao dispositivo.
+
+No dia seguinte, no horário de almoço, Lucas acessa novamente o portal. Desta vez, a página lista "Diploma de Bacharelado - Engenharia da Computação" com data de emissão e status de disponibilidade. Ao clicar para visualizar, o sistema exibe o documento em PDF e **apresenta, junto ao diploma, um selo de autenticidade, a hash registrada, um QR Code e um link de verificação para compartilhamento com terceiros**. Lucas entende que aquele diploma pode ser comprovado por empresas e baixa o PDF para uso imediato.
+
+Ao revisar a mesma tela, Lucas vê que há outros itens na lista, como certificado de conclusão de estágio e certificado de participação em evento acadêmico. **Para cada documento, o sistema informa o tipo, a situação de validade e a forma de comprovação disponível, deixando claro quais certificados podem ser compartilhados e como terceiros podem verificar sua autenticidade.** Lucas copia o link de verificação do diploma e baixa o certificado de estágio, encerrando a sessão com confiança de que consegue demonstrar a validade de seus documentos acadêmicos de forma clara e autônoma.
 
 ---
 
@@ -82,7 +92,22 @@ Para os 2 registros pendentes, **Maria acessa a fila de pendências, corrige os 
 | | U: Corrigi os dados. Pode emitir e notificar. |
 | | D: Diplomas dos 2 formandos emitidos e notificações enviadas. O processo de emissão desta turma está concluído: 238 diplomas emitidos, 238 formandos notificados. |
 
-*(Tabela 3 — João Paulo)*
+### Nome do Cenário: Acesso e Comprovação de Validade de Documentos Acadêmicos
+**Persona:** Lucas Mendes | **Responsável:** João Paulo Paggi Zuanon Dias
+
+| Tópico > Subtópico | Falas e Signos |
+|:---|:---|
+| acessar portal | U: Quero acessar meus diplomas e certificados acadêmicos. |
+| > status do serviço | D: Área de Documentos Acadêmicos indisponível no momento por manutenção. Previsão de retorno: 30 minutos. Deseja tentar novamente mais tarde? |
+| | U: Sim. Voltarei depois para consultar meus documentos. |
+| listar documentos | D: Seus documentos acadêmicos estão disponíveis. Diploma de Bacharelado - Engenharia da Computação: emitido e verificável. Certificado de estágio: disponível para download. Certificado de evento: disponível para download. |
+| > visualizar diploma | U: Quero abrir o diploma e verificar como comprovar sua autenticidade. |
+| | D: Aqui está o diploma em PDF. Este documento possui selo de autenticidade, hash registrada, QR Code e link público de verificação. |
+| > compartilhar comprovação | U: Quero copiar o link de verificação para enviar a uma empresa. |
+| | D: Link copiado com sucesso. Você também pode compartilhar o QR Code ou baixar o PDF. |
+| > visualizar certificados | U: Quero saber se o certificado de estágio também pode ser comprovado. |
+| | D: Este certificado está disponível para download e possui indicação de validade e forma de comprovação na própria tela. |
+| status final | U: Agora consigo acessar meus documentos e demonstrar a validade deles sem precisar acionar a secretaria. |
 
 ---
 
@@ -143,7 +168,38 @@ flowchart LR
     G4 --> G41["4.1 Notificar\nformandos"]:::operacao
 ```
 
-*Mapa 3 — João Paulo | Diagrama consolidado a incluir após os três)*
+### Lucas Mendes — Visualização e Comprovação de Validade de Documentos
+**Responsável:** João Paulo Paggi Zuanon Dias
+
+```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 60, 'rankSpacing': 80}, 'themeVariables': {'fontSize': '16px'}}}%%
+flowchart LR
+    classDef objetivo fill:#dbeafe,stroke:#2563eb,stroke-width:2px,font-weight:bold,color:#000000
+    classDef operacao fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
+
+    G0["0. Acessar e comprovar\nvalidade dos documentos"]:::objetivo
+    G0 --> G1 & G2 & G3 & G4
+
+    G1["1. Acessar portal\nda universidade"]:::objetivo
+    G2["2. Localizar documentos\nacadêmicos"]:::objetivo
+    G3["3. Verificar status\ne autenticidade"]:::objetivo
+    G4["4. Compartilhar\ncomprovação"]:::objetivo
+
+    G1 --> G11["1.1 Entrar no portal\nem notebook ou celular"]:::operacao
+    G1 --> G12["1.2 Consultar status\ndo serviço"]:::operacao
+
+    G2 --> G21["2.1 Abrir área de diplomas\ne certificados"]:::operacao
+    G2 --> G22["2.2 Selecionar o documento\ndesejado"]:::operacao
+
+    G3 --> G31["3.1 Visualizar PDF\ndo documento"]:::operacao
+    G3 --> G32["3.2 Ler status de emissão\ne validade"]:::operacao
+    G3 --> G33["3.3 Consultar hash,\nQR Code ou link"]:::operacao
+
+    G4 --> G41["4.1 Copiar link\nde verificação"]:::operacao
+    G4 --> G42["4.2 Baixar ou compartilhar\no documento"]:::operacao
+```
+
+*(Diagrama consolidado a incluir após os três)*
 
 ---
 
@@ -151,9 +207,6 @@ flowchart LR
 
 > **Nota:** tabelas de signo, conteúdo/restrição e prevenção/recuperação unificadas em uma única tabela por grupo.
 > **Legenda de prevenção/recuperação:** PP = Prevenção Passiva · PA = Prevenção Ativa · RA = Recuperação Apoiada · CE = Captura de Erro
-
-> **Nota:** tabelas de signo, conteúdo/restrição e prevenção/recuperação unificadas em uma única tabela por grupo.  
-> **Legenda de prevenção/recuperação:** PP = Prevenção Passiva · PA = Prevenção Ativa · RA = Recuperação Apoiada · CE = Captura de Erro  
 
 ### Ana Carolina Ferreira — Validação de Diploma por Hash  
 **Responsável:** Thales Clemente Pasquotto  
@@ -246,4 +299,49 @@ flowchart LR
 | Status de notificação por formando | Aplicação | Enumeração (Enviado / Falha / Pendente) | Gerado automaticamente após envio | Pendente | PP: resumo de destinatários antes do envio em massa | RA: lista de falhas de entrega com orientação de reenvio ou atualização de cadastro |
 | Link de acesso ao diploma | Aplicação | URL | Gerado automaticamente; único por diploma; válido enquanto o registro existir na blockchain | — | PA: link gerado apenas após emissão bem-sucedida | CE: "Diploma não encontrado. Verifique se a emissão foi concluída com sucesso" |
 
-*(Esquema 2 — Thales | Esquema 3 — João Paulo)*
+---
+
+### Lucas Mendes — Visualização e Comprovação de Validade de Documentos
+**Responsável:** João Paulo Paggi Zuanon Dias
+
+---
+
+**AD — Acesso aos Documentos**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| Área "Documentos Acadêmicos" | Aplicação | Item de navegação | Deve estar visível após autenticação do estudante | — | PP: item de menu nomeado de forma direta e consistente | RA: orientação de navegação caso o usuário não encontre a área |
+| Status do serviço | Aplicação | Enumeração (Disponível / Indisponível / Em manutenção) | Atualizado automaticamente pelo sistema | Disponível | PP: mensagem de status antes do carregamento da lista | RA: informa motivo da indisponibilidade e previsão de retorno · CE: "Serviço temporariamente indisponível. Tente novamente mais tarde" |
+| Dispositivo de acesso | Domínio | Contexto de uso (desktop / mobile) | Interface deve se adaptar ao tamanho da tela | — | PP: layout responsivo para diferentes resoluções | RA: preserva ações principais mesmo em telas menores |
+
+---
+
+**LD — Lista de Documentos**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| Documento acadêmico | Domínio | Item de lista | Deve estar associado ao estudante autenticado | — | PP: exibe nome, tipo e data de emissão de cada documento | RA: mensagem caso não exista documento disponível |
+| Tipo de documento | Aplicação | Enumeração (Diploma / Certificado) | Definido no cadastro do documento | — | PP: rótulos visíveis na listagem | RA: diferencia documentos por categoria para evitar interpretação equivocada |
+| Status do documento | Aplicação | Enumeração (Em processamento / Emitido / Disponível para download) | Gerado automaticamente conforme etapa do processo | Em processamento | PP: status sempre visível ao lado do documento | RA: explica o próximo passo quando o documento ainda não estiver disponível |
+
+---
+
+**VC — Validade e Comprovação**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| Selo de autenticidade | Aplicação | Indicador visual | Só deve aparecer em documentos com registro válido | — | PP: apresentação destacada ao lado do documento emitido | RA: ausência do selo acompanhada de explicação sobre indisponibilidade de comprovação |
+| Hash do documento | Aplicação | Texto hexadecimal | Gerada automaticamente; imutável após emissão | — | PA: campo somente leitura, com opção de copiar | RA: mensagem caso a hash ainda não esteja disponível |
+| QR Code de verificação | Aplicação | Código visual | Deve apontar para o endereço oficial de verificação | — | PP: QR Code exibido junto ao documento validável | CE: "Não foi possível gerar o QR Code de verificação" |
+| Link público de verificação | Aplicação | URL | Único por documento; acessível por terceiros autorizados | — | PP: botão explícito para copiar ou compartilhar | RA: opção de regenerar cópia do link em caso de falha de cópia |
+| Situação de validade | Aplicação | Enumeração (Válido / Sem comprovação disponível / Em processamento) | Gerada automaticamente conforme registro do documento | Em processamento | PP: texto de apoio explicando o significado de cada estado | RA: esclarece ao estudante se o documento já pode ser apresentado a terceiros |
+
+---
+
+**CP — Compartilhamento e Download**
+
+| Signo | Origem | Tipo de conteúdo | Restrição | Valor default | Prevenção | Recuperação |
+|:---|:---|:---|:---|:---|:---|:---|
+| PDF do documento | Aplicação | Arquivo | Disponível apenas para documentos emitidos | — | PP: botão de visualização e download claramente separado | RA: mensagem se o documento ainda estiver em processamento |
+| Ação de copiar link | Aplicação | Comando | Só habilitada quando houver link público disponível | Desabilitada | PP: feedback imediato após cópia bem-sucedida | RA: mensagem "Não foi possível copiar. Tente novamente" |
+| Compartilhamento da comprovação | Domínio | Ação | Deve utilizar link ou QR Code oficial do sistema | — | PP: instrução sobre como comprovar validade para terceiros | RA: orientação alternativa para baixar PDF e reenviar o link oficial |
