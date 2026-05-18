@@ -77,8 +77,7 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | Tela de Verificação de Artigo — /verificar (pública, sem login) | O campo de entrada para verificação de artigos acadêmicos é rotulado como "Hash do artigo" com descrição "Hash SHA-256 (64 caracteres hexadecimais)". O termo "hash SHA-256" é um conceito técnico de computação e não faz parte do vocabulário de uma recrutadora ou avaliadora sem formação técnica, gerando confusão sobre o que deve ser inserido. | 3 | Substituir o rótulo por "Código de autenticidade do artigo" e adicionar texto explicativo: "O código pode ser encontrado no documento enviado pelo autor ou na plataforma de submissão." Manter o detalhe técnico (SHA-256) em texto secundário para quem precisar. |
-| 2 | Tela de Detalhes do Diploma — visão da recrutadora | Após a validação, o resultado exibe o identificador da transação blockchain (ex: `0x3A4f…cB91`) como dado de confirmação da autenticidade, sem qualquer explicação contextual. O dado é irrelevante e incompreensível para a recrutadora. | 2 | Substituir ou ocultar o endereço da transação. Exibir em destaque apenas: nome do formando, curso, instituição, data de colação e o texto "Diploma autenticado e registrado na blockchain em [data]". Disponibilizar os detalhes técnicos em uma seção expansível "Ver detalhes técnicos" para quem necessitar. |
+| 1 | Tela de Detalhes do Diploma — visão da recrutadora | Após a validação, o resultado exibe o identificador da transação blockchain (ex: `0x3A4f…cB91`) como dado de confirmação da autenticidade, sem qualquer explicação contextual. O dado é irrelevante e incompreensível para a recrutadora. | 2 | Substituir ou ocultar o endereço da transação. Exibir em destaque apenas: nome do formando, curso, instituição, data de colação e o texto "Diploma autenticado e registrado na blockchain em [data]". Disponibilizar os detalhes técnicos em uma seção expansível "Ver detalhes técnicos" para quem necessitar. |
 
 ---
 
@@ -98,7 +97,7 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | Múltiplas telas do sistema | O sistema possui dois módulos distintos — "Diplomas" e "Certificados" — e os usa de forma intercambiável em diferentes contextos sem deixar claro ao usuário a diferença entre eles. Estudantes e analistas podem não compreender que se trata de documentos com natureza jurídica e fluxos distintos. | 2 | Definir e aplicar um glossário de termos padrão em toda a interface. "Diploma" refere-se exclusivamente ao documento de conclusão de curso de graduação (sujeito à Portaria MEC nº 554/2019); "Certificado" refere-se a artigos acadêmicos e outras produções registradas na plataforma. Incluir uma breve descrição de cada módulo na primeira vez que o usuário acessa. |
+| 1 | Múltiplas telas do sistema | O sistema possui dois módulos distintos — "Diplomas" e "Certificados" — e os usa de forma intercambiável em diferentes contextos sem deixar claro ao usuário a diferença entre eles. Estudantes e analistas podem não compreender que se trata de documentos com natureza jurídica e fluxos distintos. | 2 | Definir e aplicar um glossário de termos padrão em toda a interface. "Diploma" refere-se exclusivamente ao documento de conclusão de curso de graduação (sujeito à Portaria MEC nº 554/2019); "Certificado" refere-se a outros documentos acadêmicos registrados na plataforma com fluxo e finalidade distintos. Incluir uma breve descrição de cada módulo na primeira vez que o usuário acessa. |
 | 2 | Wizard de criação de diploma — botões de navegação entre etapas | O botão de ação para avançar entre etapas apresenta textos diferentes: "Próximo" (etapas 1 e 2), "Revisar" (etapa 3) e "Criar Diploma" (etapa 4), representando o mesmo tipo de ação (avançar no fluxo). Isso pode gerar estranhamento ao usuário, que espera consistência na navegação. | 1 | Padronizar o texto dos botões de avanço: usar "Continuar" em todas as etapas intermediárias e reservar o rótulo descritivo ("Criar Diploma") apenas para a ação final de submissão. |
 
 ---
@@ -109,7 +108,7 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | Tela de Verificação de Artigo — /verificar e Tela de Validação de Diploma — /validar | Os campos de entrada (hash do artigo e código de validação do diploma) não realizam validação em tempo real do formato digitado. O usuário pode inserir uma string em formato incorreto (ex: com espaços, caracteres especiais ou tamanho errado) e só receberá feedback de erro após submeter o formulário e aguardar o processamento. | 3 | Implementar validação em tempo real (on-blur/on-change) nos campos de código/hash, verificando o formato esperado imediatamente após o usuário terminar de digitar. Para o hash SHA-256: string hexadecimal de 64 caracteres. Para o código MEC: formato "NNN.NNN.XXXXXXXXXXXXXXXX". Exibir feedback visual antes da submissão. |
+| 1 | Tela de Validação de Diploma — /validar (pública, sem login) | O campo de código de validação não realiza validação em tempo real do formato digitado. A recrutadora (Ana Carolina) pode inserir uma string em formato incorreto (ex: com espaços, caracteres especiais ou tamanho errado) e só receberá feedback de erro após submeter o formulário e aguardar o processamento. | 3 | Implementar validação em tempo real (on-blur/on-change) no campo de código, verificando o formato esperado imediatamente após o usuário terminar de digitar (ex: formato "NNN.NNN.XXXXXXXXXXXXXXXX" conforme o padrão MEC). Exibir feedback visual antes da submissão. |
 
 ---
 
@@ -119,7 +118,7 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | Fluxo de Validação — Tela de Resultado (/validar e /verificar) | Após concluir a validação de um diploma ou verificação de um artigo, o resultado não persiste na tela: ao pressionar "Voltar" no navegador ou recarregar a página, o resultado é perdido e o usuário precisa lembrar e reinserir o código/hash para obter o resultado novamente. | 2 | Manter o resultado da última validação visível na tela via estado local persistido em sessionStorage, ou oferecer opção de exportar/copiar o resultado. Isso permite que o usuário retome o contexto sem precisar reinserir dados. |
+| 1 | Tela de Validação de Diploma — Resultado (/validar) | Após concluir a validação de um diploma, o resultado não persiste na tela: ao pressionar "Voltar" no navegador ou recarregar a página, o resultado é perdido e a recrutadora (Ana Carolina) precisa lembrar e reinserir o código para obter o resultado novamente. | 2 | Manter o resultado da última validação visível na tela via estado local persistido em sessionStorage, ou oferecer opção de exportar/copiar o resultado. Isso permite que a recrutadora retome o contexto sem precisar reinserir dados. |
 
 ---
 
