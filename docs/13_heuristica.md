@@ -65,6 +65,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Detalhes do Diploma](./detalhes-diploma.jpeg)
+
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
 | 1 | Tela de Detalhes do Diploma — Registro na Blockchain | Ao clicar em "Registrar em Blockchain", o sistema exibe apenas um spinner genérico de carregamento sem nenhuma informação sobre o andamento do processo. O usuário (Maria Eduarda) não sabe se a operação está em curso, travada ou finalizada enquanto aguarda a confirmação da rede. | 3 | Exibir uma mensagem de status progressiva durante o registro: "Enviando para a blockchain…", "Aguardando confirmação da rede…", "Diploma registrado com sucesso!" — mantendo o usuário informado em cada etapa da operação assíncrona. |
@@ -74,6 +76,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 ## H2 — Compatibilidade entre Sistema e Mundo Real
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Detalhes do Diploma](./detalhes-diploma.jpeg)
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
@@ -85,6 +89,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Detalhes do Diploma](./detalhes-diploma.jpeg)
+
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
 | 1 | Tela de Detalhes do Diploma — Modal de Confirmação de Registro | Ao clicar em "Registrar em Blockchain" e confirmar o modal, o processamento é iniciado de forma irreversível. O texto do modal diz apenas "O diploma será registrado na blockchain e no IPFS. Esta operação pode levar alguns segundos." — sem alertar explicitamente que a operação não pode ser desfeita. A analista (Maria Eduarda) não tem ciência clara da imutabilidade da ação antes de confirmá-la. | 3 | Adicionar ao texto do modal um aviso explícito sobre a irreversibilidade: "Após confirmar, o diploma será registrado permanentemente na blockchain e não poderá ser desfeito. Você revisou todos os dados?" com botões "Cancelar" e "Confirmar definitivamente". |
@@ -95,16 +101,19 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Listagem de Diplomas](./listagem-diplomas.jpeg)
+
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
 | 1 | Múltiplas telas do sistema | O sistema possui dois módulos distintos — "Diplomas" e "Certificados" — e os usa de forma intercambiável em diferentes contextos sem deixar claro ao usuário a diferença entre eles. Estudantes e analistas podem não compreender que se trata de documentos com natureza jurídica e fluxos distintos. | 2 | Definir e aplicar um glossário de termos padrão em toda a interface. "Diploma" refere-se exclusivamente ao documento de conclusão de curso de graduação (sujeito à Portaria MEC nº 554/2019); "Certificado" refere-se a outros documentos acadêmicos registrados na plataforma com fluxo e finalidade distintos. Incluir uma breve descrição de cada módulo na primeira vez que o usuário acessa. |
-| 2 | Wizard de criação de diploma — botões de navegação entre etapas | O botão de ação para avançar entre etapas apresenta textos diferentes: "Próximo" (etapas 1 e 2), "Revisar" (etapa 3) e "Criar Diploma" (etapa 4), representando o mesmo tipo de ação (avançar no fluxo). Isso pode gerar estranhamento ao usuário, que espera consistência na navegação. | 1 | Padronizar o texto dos botões de avanço: usar "Continuar" em todas as etapas intermediárias e reservar o rótulo descritivo ("Criar Diploma") apenas para a ação final de submissão. |
 
 ---
 
 ## H5 — Prevenção de Erros
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
@@ -116,6 +125,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
+
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
 | 1 | Tela de Validação de Diploma — Resultado (/validar) | Após concluir a validação de um diploma, o resultado não persiste na tela: ao pressionar "Voltar" no navegador ou recarregar a página, o resultado é perdido e a recrutadora (Ana Carolina) precisa lembrar e reinserir o código para obter o resultado novamente. | 2 | Manter o resultado da última validação visível na tela via estado local persistido em sessionStorage, ou oferecer opção de exportar/copiar o resultado. Isso permite que a recrutadora retome o contexto sem precisar reinserir dados. |
@@ -126,16 +137,19 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Listagem de Diplomas](./listagem-diplomas.jpeg)
+
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
 | 1 | Painel da Analista — Listagem de Diplomas (/diplomas) | Não há suporte a ações em massa (bulk actions) na tabela de diplomas. A analista (Maria Eduarda), que gerencia múltiplos registros, precisa executar ações (ex: anular, reenviar notificação) individualmente em cada diploma, tornando o fluxo ineficiente para usuários experientes. | 2 | Implementar seleção múltipla (checkbox) na tabela de diplomas com menu de ações em massa: "Anular selecionados" e "Exportar selecionados", seguindo padrões de interfaces de gestão como o Google Admin ou sistemas ERP. |
-| 2 | Sistema em geral | Nenhuma ação comum do fluxo de emissão individual possui atalho de teclado. Um usuário experiente como a analista não tem como acelerar tarefas repetitivas (ex: confirmar etapa, ir para o próximo campo) sem recorrer ao mouse em cada interação. | 1 | Implementar atalhos de teclado para ações frequentes (ex: Enter para confirmar modais, Esc para cancelar, Tab para navegar entre campos do formulário) e documentá-los em tooltip sobre os botões correspondentes. |
 
 ---
 
 ## H8 — Projeto Minimalista e Estético
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Detalhes do Diploma](./detalhes-diploma.jpeg)
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
@@ -147,6 +161,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
+
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
 | 1 | Tela de Validação — Código não encontrado (/validar) | Quando o usuário insere um código válido em formato, mas que não corresponde a nenhum diploma registrado, o sistema exibe apenas "Nenhum diploma encontrado para este código. Confira se copiou o código completo." — sem orientar sobre outras causas possíveis ou o que fazer a seguir. | 3 | Enriquecer a mensagem de erro com contexto e orientação: "Nenhum diploma foi encontrado com este código. Possíveis causas: (1) o código foi digitado com erro — verifique os caracteres; (2) o diploma ainda não foi registrado pela instituição; (3) o documento pode não ser autêntico. Em caso de dúvida, entre em contato com a instituição emissora." |
@@ -156,6 +172,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 ## H10 — Ajuda e Documentação
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
 
 | # | Tela / Local | Descrição da Violação | Severidade | Recomendação de Correção |
 | :---: | :--- | :--- | :---: | :--- |
@@ -176,6 +194,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Detalhes do Diploma](./detalhes-diploma.jpeg)
+
 ---
 
 ### BP-H2 — Compatibilidade entre Sistema e Mundo Real
@@ -184,6 +204,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 **Boa prática identificada:** O menu de navegação utiliza terminologia familiar ao contexto acadêmico da analista (Maria Eduarda): "Diplomas", "Alunos", "Meus diplomas" — sem exposição de jargões técnicos como "smart contract", "ledger" ou "nó da rede". A organização segue a lógica do fluxo real de trabalho da secretaria acadêmica, do recebimento dos dados à emissão e correção.
 
 > **_NOTE:_**: **colocar o print**
+
+![Dashboard](./dahboard.jpeg)
 
 ---
 
@@ -194,6 +216,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Criação de Diploma](./criar-diploma.jpeg)
+
 ---
 
 ### BP-H4 — Consistência e Padrões
@@ -202,6 +226,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 **Boa prática identificada:** Todos os modais de confirmação de ações críticas no sistema (emitir diploma, registrar na blockchain, anular diploma) seguem o mesmo padrão visual e estrutural: título descritivo da ação, texto explicativo das consequências, e dois botões no rodapé — "Cancelar" (estilo secundário) e "Confirmar" (estilo primário). Essa consistência reduz a curva de aprendizado e evita que o usuário cometa erros por falta de familiaridade com o padrão da interface.
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Detalhes do Diploma](./detalhes-diploma.jpeg)
 
 ---
 
@@ -212,6 +238,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Criação de Diploma](./criar-diploma.jpeg)
+
 ---
 
 ### BP-H6 — Reconhecimento em Lugar de Lembrança
@@ -220,6 +248,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 **Boa prática identificada:** A tela de validação pública apresenta instruções visíveis diretamente na tela sem necessidade de consultar documentação externa: o campo rotulado "Código", a descrição do formato esperado ("Código de validação MEC (ex.: 593.593.ABCDEF123456)") e o botão de ação claramente rotulado. O fluxo completo — "inserir código → consultar → ver resultado" — é compreensível em uma única visão sem que o usuário precise lembrar etapas aprendidas anteriormente.
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
 
 ---
 
@@ -230,6 +260,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Dashboard](./dahboard.jpeg)
+
 ---
 
 ### BP-H8 — Projeto Minimalista e Estético
@@ -238,6 +270,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 **Boa prática identificada:** A tela de resultado de uma validação bem-sucedida exibe apenas as informações essenciais para a decisão da recrutadora (Ana Carolina): nome completo do formando, CPF mascarado, curso, grau conferido, IES emissora, IES registradora e data de colação. Os dados técnicos de blockchain são apresentados em texto secundário discreto, sem competir com as informações operacionalmente relevantes.
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
 
 ---
 
@@ -248,6 +282,8 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 
 > **_NOTE:_**: **colocar o print**
 
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
+
 ---
 
 ### BP-H10 — Ajuda e Documentação
@@ -256,3 +292,5 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 **Boa prática identificada:** A tela de validação pública exibe, logo abaixo do título, um texto explicativo contextual: "Informe o código impresso no diploma ou lido no QR Code (mesmo formato exibido no documento)." — orientando o usuário sobre onde encontrar o código sem que ele precise sair da página ou consultar documentação externa. A ajuda está embutida na própria interface, centrada na tarefa do usuário.
 
 > **_NOTE:_**: **colocar o print**
+
+![Tela de Validação de Diploma](./validar-diploma.jpeg)
